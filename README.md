@@ -1,9 +1,21 @@
 # BusFacility
-### Projeto de PI
+## Projeto de PI
 
 ---
 
-### Sprint 02 – Semana de 18/Out
+## Reuniões
+
+terça e quinta - presencial
+Seg e quarta - on-line (20:30)
+
+---
+
+## Links
+
+- [ChartJS](https://www.chartjs.org/)
+
+
+## Sprint 02 – Semana de 18/Out
 
 #### Pesquisa e Inovação
 
