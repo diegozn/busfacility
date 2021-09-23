@@ -16,8 +16,9 @@ Seg e quarta - on-line (20:30)
 
 ## Tutoriais
 
-####TUTORIAL PASSO A PASSO DE COMO USAR GIT / GITHUB
-Recomendações: É recomendável que o usuário crie uma pasta de fácil acesso apenas para repositorios do github para melhor organização!
+#### TUTORIAL PASSO A PASSO DE COMO USAR GIT / GITHUB
+
+###### Recomendações: É recomendável que o usuário crie uma pasta de fácil acesso apenas para repositorios do github para melhor organização!
 
     1. Primeiramente é preciso verificar se você está com o usuário e email correto. Para isso dê o comando git config –-global –-list. Caso esteja tudo correto, prossiga. Caso não, coloque os seguintes comandos: Para seu nome: git config –-global user.name “<insira seu nome do github>”  Aperte ENTER e coloque git config –-global user.email “<insira seu email do github>” para seu email. Coloque novamente o git config –-global –-list para verificar as alterações. 
     2. Clonar o repositório da nuvem (github) com o comando git clone <link>. IMPORTANTE: lembre-se onde está sendo feita a clonagem, em qual pasta. Em seguida, abra a pasta do projeto. Para entrar na pasta basta colocar o comando cd <nome da pasta>. Caso aconteça algum erro, podem ser duas situações: 1) Você pode ja ter clonado o repositório ou 2) A senha (token) está incorreta, tendo que tentar novamente. Caso mesmo assim não consiga, recrie o token.
