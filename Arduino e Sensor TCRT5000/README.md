@@ -43,3 +43,38 @@
 ---
 
 ## Segue demais imagens de fotos para melhor comprensão:
+
+![IMG](./foto1.png)
+
+![IMG](./foto2.png)
+
+![IMG](./foto3.png)
+
+---
+
+## Código e execução:
+
+![IMG](./codigo1.png)
+
+Em seguida execute o código a seguir dentro da IDE do arduíno.
+
+~~~c++
+int pinoSensor = 7;
+
+void setup() {
+
+pinMode(pinoSensor, INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+if(digitalRead(pinoSensor) == LOW){
+Serial.println("Objeto: Detectado");
+}
+else {
+Serial.println("Objeto: Ausente");
+}
+delay(3000);
+}
+~~~
+
