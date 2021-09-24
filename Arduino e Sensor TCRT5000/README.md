@@ -54,7 +54,7 @@
 
 ## Código e execução:
 
-![IMG](./codigo1.jpeg)
+![IMG](./codigo4.jpeg)
 
 Em seguida execute o código a seguir dentro da IDE do arduíno.
 
