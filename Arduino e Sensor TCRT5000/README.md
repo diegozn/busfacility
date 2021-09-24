@@ -44,17 +44,17 @@
 
 ## Segue demais imagens de fotos para melhor comprensão:
 
-![IMG](./foto1.png)
+![IMG](./foto1.jpeg)
 
-![IMG](./foto2.png)
+![IMG](./foto2.jpeg)
 
-![IMG](./foto3.png)
+![IMG](./foto3.jpeg)
 
 ---
 
 ## Código e execução:
 
-![IMG](./codigo1.png)
+![IMG](./codigo1.jpeg)
 
 Em seguida execute o código a seguir dentro da IDE do arduíno.
 
