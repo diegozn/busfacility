@@ -35,7 +35,7 @@ Seg e quarta - on-line (20:30)
 
 #### Pesquisa e Inovação
 
-- Projetos atualizado no GitHub  /  Documentação do Projeto Atualizada
+-~Projetos atualizado no GitHub  /  Documentação do Projeto Atualizada~
 - Planilha de Riscos do Projeto
 
 #### Algoritmos
@@ -46,7 +46,7 @@ Seg e quarta - on-line (20:30)
 
 #### Tecnologia da Informação
 
-- Ferramenta de Gestão de Projeto Funcionando
+- ~Ferramenta de Gestão de Projeto Funcionando~
 - HLD do Projeto  /  LLD do Projeto
 - Planilha de BackLog /  Planilha de Sprints
 
