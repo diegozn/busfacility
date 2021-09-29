@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+
+    height: 100%;
+}
+.div_main{
+
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+
+}
+
+#nav1{
+
+    background-color: #E57019;
+    height: 82px;
+    width: 100wv;
+    
+    
+
+
+}
+
+#img_logo{
+
+    height: 66px;
+    width: 273px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+
+}
+
+#footer1{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #383838ab;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    height: 82px;
+    width: 100%;
+    
+}
