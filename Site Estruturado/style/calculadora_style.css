@@ -6,6 +6,7 @@
 html, body{
 
     height: 100%;
+    font-size: large;
 }
 .div_main{
 
@@ -20,17 +21,9 @@ html, body{
     background-color: #E57019;
     height: 82px;
     width: 100wv;
+    
+    
 
-}
-
-.links_navbar{
-
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 82px;
-    width: 100%;
 
 }
 
@@ -58,10 +51,4 @@ html, body{
     height: 82px;
     width: 100%;
     
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
