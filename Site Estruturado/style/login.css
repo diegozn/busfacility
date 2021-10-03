@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container { 
+
+    max-width: 800px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+.div_primaria {
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 8px grey;
+
+}
+
+#img_logo_box{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+
+}
+
+.titulo {
+
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+
+}
+
+.cadastro {
+
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    padding: 0 0 10px 0;
+    
+}
+
+.input_login {
+    width: 50%;
+    height: 80%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-width: 1px;
+}
+
+.botao_entrar {
+
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: #E57019;
+    color: white;
+    margin: 15px 0 20px 0;
+    padding: 5px 50px 5px 50px;
+    border-radius: 8px; 
+
+}
+
+
+html, body{
+
+    height: 100%;
+}
+.div_main{
+
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+
+}
+
+#nav1{
+
+    background-color: #E57019;
+    height: 82px;
+    width: 100vw;
+
+}
+
+.links_navbar{
+
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 82px;
+    width: 100%;
+
+}
+
+.img_logo{
+
+    width: 273px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+
+}
+
+#footer1{
+
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #383838ab;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    height: 82px;
+    width: 100%;
+    
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
