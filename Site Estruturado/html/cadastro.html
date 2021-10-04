@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Login </title>
-    <link rel="stylesheet" href="../style/login.css">
+    <title> Cadastro </title>
+    <link rel="stylesheet" href="../style/cadastro.css">
 </head>
 <body>
 
@@ -19,15 +19,22 @@
 
         <div class="div_primaria">
             <img id="img_logo_box" src="../style/src/logo.jpg" alt="">
-            <h2 class="titulo"> Faça seu login! </h2>
+            <h2 class="titulo"> Entre em contato conosco </h2>
 
-                <input class="input_login" type="text" placeholder="Digite seu usuario">
-                <input class="input_login" type="password" placeholder="Digite sua senha">
+                <input class="input_cadastro" type="number" placeholder="CNPJ">
                 
-                <p class="cadastro"> Não possui uma conta? <a href="../html/cadastro.html"> clique aqui </a></p>
+                <input class="input_cadastro" type="text" placeholder="Razão Social">
+                
+                <input class="input_cadastro" type="email" placeholder="E-mail">
+                
+                <input class="input_cadastro" type="number" placeholder="Telefone">
+                
+                <input id="input_frotas" class="input_cadastro" type="text" placeholder="Adicionar frotas">
+                
+                        <button class="botao_add" onclick="add_frotas()" > + </button>
 
                 <a href="" target="_blank" rel="noopener noreferrer">
-                    <button class="botao_entrar" onclick="button_entrar()"> Entrar </button>
+                    <button class="botao_entrar"> Enviar </button>
                 </a>
 
         </div>
