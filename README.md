@@ -35,25 +35,25 @@ Seg e quarta - on-line (20:30)
 
 #### Pesquisa e Inovação
 
--~Projetos atualizado no GitHub  /  Documentação do Projeto Atualizada~
-- Planilha de Riscos do Projeto
+- ̶P̶r̶o̶j̶e̶t̶o̶s̶ ̶a̶t̶u̶a̶l̶i̶z̶a̶d̶o̶ ̶n̶o̶ ̶G̶i̶t̶H̶u̶b̶  /  D̶o̶c̶u̶m̶e̶n̶t̶a̶ç̶ã̶o̶ ̶d̶o̶ ̶P̶r̶o̶j̶e̶t̶o̶ ̶A̶t̶u̶a̶l̶i̶z̶a̶d̶a̶
+- P̶l̶a̶n̶i̶l̶h̶a̶ ̶d̶e̶ ̶R̶i̶s̶c̶o̶s̶ ̶d̶o̶ ̶P̶r̶o̶j̶e̶t̶o̶
 
 #### Algoritmos
 
-- Site Estático Institucional – Local em HTML/CSS/JavaScript
+- S̶i̶t̶e̶ ̶E̶s̶t̶á̶t̶i̶c̶o̶ ̶I̶n̶s̶t̶i̶t̶u̶c̶i̶o̶n̶a̶l̶ ̶–̶ ̶L̶o̶c̶a̶l̶ ̶e̶m̶ ̶H̶T̶M̶L̶/̶C̶S̶S̶/̶J̶a̶v̶a̶S̶c̶r̶i̶p̶t̶
 - Site Estático Dashboard (Gráfico com ChartJS) - Local
-- Site Estático Cadastro e Login - Local
+- S̶i̶t̶e̶ ̶E̶s̶t̶á̶t̶i̶c̶o̶ ̶C̶a̶d̶a̶s̶t̶r̶o̶ ̶e̶ ̶L̶o̶g̶i̶n̶ ̶-̶ ̶L̶o̶c̶a̶l̶
 
 #### Tecnologia da Informação
 
 - ~Ferramenta de Gestão de Projeto Funcionando~
-- HLD do Projeto  /  LLD do Projeto
+-  ̶H̶L̶D̶ ̶d̶o̶ ̶P̶r̶o̶j̶e̶t̶o̶ ̶ ̶/̶ ̶ ̶L̶L̶D̶ ̶d̶o̶ ̶P̶r̶o̶j̶e̶t̶o̶
 - Planilha de BackLog /  Planilha de Sprints
 
 #### Banco de Dados
 
-- Modelagem Lógica do Projeto v1
-- Script de criação do Banco  /  Tabelas criadas em BD local
+- M̶o̶d̶e̶l̶a̶g̶e̶m̶ ̶L̶ó̶g̶i̶c̶a̶ ̶d̶o̶ ̶P̶r̶o̶j̶e̶t̶o̶ ̶v̶1̶
+- S̶c̶r̶i̶p̶t̶ ̶d̶e̶ ̶c̶r̶i̶a̶ç̶ã̶o̶ ̶d̶o̶ ̶B̶a̶n̶c̶o̶  /   ̶T̶a̶b̶e̶l̶a̶s̶ ̶c̶r̶i̶a̶d̶a̶s̶ ̶e̶m̶ ̶B̶D̶ ̶l̶o̶c̶a̶l̶
 
 #### Arquitetura Computacional
 
