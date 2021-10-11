@@ -16,8 +16,15 @@ function calcular() {
     
     // Mundando o que aparece na tela
     texto.style.display = 'none';
-    calculo.style.display = 'block';
+    calculo.style.display = 'flex';
     s_total.innerHTML = ax_total.toFixed(2);
     s_mes.innerHTML = ax_total_mes.toFixed(2)
     s_qto.innerHTML = ax_qto.toFixed(0);
+}
+
+function voltar(){
+
+    texto.style.display = 'flex';
+    calculo.style.display = 'none';
+
 }
