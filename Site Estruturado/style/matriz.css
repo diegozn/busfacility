@@ -6,35 +6,38 @@
 html, body{
 
     height: 100%;
+    font-size: large;
 }
-.div_main{
+h2 {
+    text-align: center;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
 
-    min-height: 100%;
-    position: relative;
+a {
+    text-decoration: none;
+
+}
+li:hover{
+
+    color: #F22B0C;
+
+}
+.container{
+
     width: 100%;
+    margin: 0 auto;
 
 }
-
-#nav1{
+.header {
 
     background-color: #E57019;
     height: 82px;
     width: 100wv;
 
 }
-
-.links_navbar{
-
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 82px;
-    width: 100%;
-
-}
-
-#img_logo{
+.img_logo img {
 
     height: 66px;
     width: 273px;
@@ -42,10 +45,31 @@ html, body{
     justify-content: center;
     align-items: center;
     padding: 6px;
+    
+}
+.header .container{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+.header .navbar {
+
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+.header .navbar a {
+
+    color: white;
+    font-family: sans-serif;
 
 }
 
-#footer1{
+.footer .navbar{
 
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,11 +81,13 @@ html, body{
     bottom: 0;
     height: 82px;
     width: 100%;
+    list-style: none;
     
 }
+.footer .navbar a {
 
-ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    color: black;
+    text-decoration: none;
+    
+
 }
