@@ -18,17 +18,20 @@
 
     <div class="container">
 
+
         <div class="div_primaria">
             <img id="img_logo_box" src="../style/src/logo.jpg" alt="">
             <h2 class="titulo"> Entre em contato conosco </h2>
 
-                <input class="input_cadastro" type="number" placeholder="CNPJ">
+                <input class="input_cadastro" type="text" placeholder="CNPJ">
                 
                 <input class="input_cadastro" type="text" placeholder="Razão Social">
                 
-                <input class="input_cadastro" type="email" placeholder="E-mail">
+                <input id="input_email" onkeyup="checkEmail()" class="input_cadastro" type="email" placeholder="E-mail">
                 
                 <input class="input_cadastro" type="number" placeholder="Telefone">
+
+                <input class="input_cadastro" type="number" placeholder="Senha">
                 
                 <input id="input_frotas" class="input_cadastro" type="text" placeholder="Adicionar frotas">
                 
@@ -50,6 +53,6 @@
     </footer>
 
 </div>
-
+    <script src="cadastro.js"></script>
 </body>
 </html>
