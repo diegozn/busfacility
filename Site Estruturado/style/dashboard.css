@@ -1,0 +1,112 @@
+.grafico {
+
+    height: 70%;
+    width: 100%;
+    display: flex;
+    background-color: crimson;
+    padding: 25px;
+
+}
+
+.box_main {
+
+    height: 600px;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+
+}
+.box_main2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box_seletor{
+
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    padding: 2px; 
+
+}
+.box_seletor select {
+
+    height: 50%;
+    width: 40%;
+    align-self: center;
+    margin-left: 60px;
+    border-radius: 10px;
+
+
+}
+.box_grafico1 {
+
+    height: 500px;
+    width: 49%;
+    background-color: pink;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+
+}
+.box_grafico2 {
+
+    height: 500px;
+    width: 49%;
+    background-color: green;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+
+}
+.marcadores {
+
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: cadetblue;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 15px;
+
+}
+
+.marcadores div {
+
+    height: 20px;
+    width: 20px;
+    align-self: center; 
+    float: left;
+    margin-right:3px; 
+
+}
+#div1{
+
+    background-color: #B64040;
+
+}
+#div2{
+
+    background-color: #445E84;
+
+}
+#div3{
+
+    background-color:#939C30;
+
+}
+
+.titulo {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+
+}
