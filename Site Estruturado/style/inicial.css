@@ -5,19 +5,12 @@
 
 html, body{
 
-    height: 100%;
-}
-
-.div_main{
-
-    min-height: 100%;
-    position: relative;
     width: 100%;
-    display: flex;
-    
+    height: 100%;
+
 }
 
-#nav1{
+#header{
 
     background-color: #E57019;
     height: 82px;
@@ -65,7 +58,71 @@ html, body{
 
 }
 
-#footer1{
+.banner {
+
+    width: 100%;
+    height: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .container {
+
+    width: 98%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.lista {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF8E5;
+    border-radius: 10px;
+    height: 100%;
+
+    -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+    -moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+}
+
+.lista input {
+    margin: 25px;
+    border-radius: 8px;
+    background-color: #FFF8E5;
+}
+
+.mapa_status {
+
+    height: 80%;
+    margin-left: 2%;
+}
+
+.mapa {
+
+    height: 80%;
+    width: 90%;
+    margin-left: 20px;
+    vertical-align: top;
+
+}
+
+.status {
+
+    height: 150px;
+    background-color: #FFF8E5;
+
+    -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+    -moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
+
+}
+
+#footer{
 
     display: flex;
     flex-direction: row;
@@ -74,7 +131,6 @@ html, body{
     align-items: center;
     justify-content: space-evenly;
     color: rgb(0, 0, 0);
-    position: absolute;
     bottom: 0;
     height: 41px;
     width: 100%;
@@ -83,13 +139,6 @@ html, body{
 
 .aba_fot {
     color: black;
-}
-
-.div_banner {
-
-    height: 100%;
-    background-color: red;
-
 }
 
 /* 

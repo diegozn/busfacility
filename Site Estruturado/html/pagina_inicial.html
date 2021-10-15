@@ -8,39 +8,68 @@
     <link rel="shortcut icon" href="../style/src/favicon.ico" type="image/x-icon">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="../style/inicial.css">
+    <link rel="shortcut icon" href="../style/src/¡cone favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <div class="div_main">
+    <nav id="header">
 
-        <nav id="nav1">
+        <div id="div_img">
+            <a href="./pagina_inicial.html" id="link_inicial">
+                <img id="img_logo" src="../style/src/bus.png">
+            </a>
+        </div>
 
-            <div id="div_img">
-                <a href="./pagina_inicial.html" id="link_inicial"><img id="img_logo" src="../style/src/logo.jpg"></a>
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html">Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastro.html">Fale Conosco/Cadastro</a></ul>
+            <ul><a class="aba_nav" href="./login.html">Login</a></ul>
+        </div>
+
+    </nav>
+
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="lista">
+                <input type="text" placeholder="Digite nome do ônibus..."><a href=""><i class="fas fa-search"></i></a>
+                <ul>Jb. Bandeirantes</ul>
+                <ul>Jb. Do Castelo</ul>
+                <ul>Shopping Tatuapé</ul>
+                <ul>Metro Morumbi</ul>
             </div>
-            
-            <div class="links_navbar">
-                <ul><a class="aba_nav" href="./quem_somos.html">Quem somos</a></ul>
-                <ul><a class="aba_nav" href="./cadastro.html">Fale Conosco/Cadastro</a></ul>
-                <ul><a class="aba_nav" href="./login.html">Login</a></ul>
+
+            <div class="mapa_status">
+
+                <iframe class="mapa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-46.629796028137214%2C-23.562925030199022%2C-46.59692287445069%2C-23.539241943417757&amp;layer=mapnik"
+                    style="border: 1px solid black"></iframe><br /><small><a
+                        href="https://www.openstreetmap.org/#map=15/-23.5511/-46.6134"></a></small>
+
+                <div class="status">
+                    <ul>8481 - 50/50 pessoas</ul>
+                    <ul>Local atual: R. Capitão Cívil - Prox. Ponto: 5 min</ul>
+                    <ul>2009 - 25/65 pessoas</ul>
+                    <ul>Local atual: R. Gabriel Barbosa - Prox. Ponto: 25 min. </ul>
+                    <ul>5724 - 15/42 pessoas</ul>
+                    <ul>Local atual: R. Luiz César Souza - Prox. Ponto: 2 min.</ul>
+                </div>
+
             </div>
-
-        </nav>
-
-        <div class="div_banner">
 
         </div>
 
-        <footer id="footer1">
-
-            <ul><a class="aba_fot" href="./politicas.html">Políticas de Privacidade</a></ul>
-            <ul><a class="aba_fot" href="./termos.html">Termos de Uso</a></ul>
-            <ul><a class="aba_fot" href="./duvidas.html">Dúvidas Frequentes</a></ul>
-
-        </footer>
-
     </div>
+
+    <footer id="footer">
+
+        <ul><a class="aba_fot" href="./politicas.html">Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html">Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html">Dúvidas Frequentes</a></ul>
+
+    </footer>
 
 </body>
 
