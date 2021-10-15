@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../style/src/ícone favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/dashboard.css">
+    <link rel="shortcut icon" href="../style/src/favicon.ico" type="image/x-icon">
     <title>Dashboard</title>
 </head>
 <body>
@@ -46,13 +47,15 @@
 
         <div class="box_seletor">
 
-            <select name="" id="filtrar"></select>
+            <select name="" id="filtrar">
+                <option value="">Filtrar por frota</option>
+            </select>
 
         </div>
         <div class="box_main2">
             <div class="box_grafico1">
                 <div class="titulo">Média de pessoas por horário</div>
-                <div class="grafico"><canvas id="canva1"></canvas></div>
+                <div class="grafico1"><canvas id="canva1"></canvas></div>
             </div>
             <div class="box_grafico2">
                 <div class="titulo">Porcentagem de pessoas por período</div>
@@ -62,7 +65,7 @@
                    <span><div id="div3"></div>Noite</span> 
 
                 </div>
-                <div class="grafico"><canvas id="canva2"></canvas></div>
+                <div class="grafico2"><canvas id="canva2"></canvas></div>
             </div>
         </div>
 
