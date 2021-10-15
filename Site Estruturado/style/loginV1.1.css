@@ -7,7 +7,7 @@
     max-width: 750px;
     text-align: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 100px auto;
     height: 100%;
     
 }
@@ -40,19 +40,18 @@
     padding: 20px;
 }
 
-.input_cadastro {
+.input_login {
     width: 50%;
     height: 80%;
     padding: 8px 20px;
-    margin: 12px auto;
+    margin: 8px auto;
     border-radius: 6px;
     border-width: 2px;
     display: flex;
     border: 1px solid;
 }
 
-.div_secundaria .input_cadastro {
-        width: 45%;
+.div_secundaria .input_login {
         margin-left: 30px;
         display: unset;
 }
@@ -64,16 +63,7 @@
 
 }
 
-.botao_add {
-    padding: 8px 12px;
-    background-color: whitesmoke;
-    border-radius: 8px;
-    border-width: 1px;
-    border: 1px solid;
-    display: unset;
-}
-
-.botao_enviar {
+.botao_entrar {
     font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
     background-color: #E57019;
