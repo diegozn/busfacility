@@ -54,23 +54,23 @@
             <img id="img_logo_box" src="../style/src/logo.jpg" alt="">
             <h2 class="titulo"> Entre em contato conosco </h2>
 
-                <input class="input_cadastro" type="text" placeholder="CNPJ">
+                <input id="input_cnpj" class="input_cadastro" type="text" placeholder="CNPJ">
 
-                <input class="input_cadastro" type="text" placeholder="Razão Social">
+                <input id="input_social" class="input_cadastro" type="text" placeholder="Razão Social">
 
                 <input id="input_email" onkeyup="checkEmail()" class="input_cadastro" type="email" placeholder="E-mail">
 
-                <input class="input_cadastro" type="number" placeholder="Telefone">
+                <input id="input_telefone" class="input_cadastro" type="number" placeholder="Telefone">
             
             <div class="div_secundaria">
-                <input class="input_cadastro" type="text" placeholder="Senha">
-                        <img class="img_olho" src="../style/src/invisivel_senha.png" alt="">
+                <input id="input_senha" class="input_cadastro" type="password" placeholder="Senha">
+                        <img id="imagem_olho" onclick="mostrarSenha()" class="img_olho" src="../style/src/invisivel_senha.png" alt="">
             
                 <input class="input_cadastro" type="text" placeholder="Adicionar frotas">
                         <button class="botao_add" onclick="add_frotas()"> + </button>
             </div>
 
-                <button class="botao_enviar"> Enviar </button>
+                <button onclick="enviarCadastro()" class="botao_enviar"> Enviar </button>
                 
 
         </div>
@@ -102,5 +102,6 @@
     </footer>
 
     </div>
+    <script src="../script/cadastro.js"></script>
 </body>
 </html>
