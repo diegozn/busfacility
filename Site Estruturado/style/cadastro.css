@@ -50,7 +50,6 @@
 #input_frotas {
     width: 40%;
     display:unset;
-    
 }
 
 .botao_add {
@@ -87,6 +86,7 @@ html, body{
 
     height: 100%;
 }
+
 .div_main{
 
     min-height: 100%;
@@ -153,5 +153,35 @@ ul {
     background-color: blue;
     display: flex;
     
+
+}
+
+.img_olho {
+    width: 25px;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+.teste  {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+
+}
+
+.teste  .input_cadastro {
+    margin-left: auto;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 40%;
+    display:unset;
 
 }
