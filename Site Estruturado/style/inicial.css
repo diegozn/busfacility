@@ -15,12 +15,14 @@ html, body{
     background-color: #E57019;
     height: 82px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
 
 .links_navbar{
 
-    float: right;
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
@@ -49,12 +51,12 @@ html, body{
 
 #img_logo, #link_inicial {
 
-    height: 66px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-left: 3px;
+    padding-left: 20px;
 
 }
 
@@ -70,11 +72,11 @@ html, body{
 .banner .container {
 
     width: 98%;
-    height: 100%;
+    height: 95%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: space-evenly;
+
 }
 
 .lista {
@@ -84,6 +86,7 @@ html, body{
     background-color: #FFF8E5;
     border-radius: 10px;
     height: 100%;
+    
 
     -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
     -moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
@@ -91,22 +94,34 @@ html, body{
 }
 
 .lista input {
+
+    align-self: center;
+    width: 80%;
     margin: 25px;
     border-radius: 8px;
     background-color: #FFF8E5;
+
+}
+
+.lista ul {
+    margin: 5px;
 }
 
 .mapa_status {
 
-    height: 80%;
-    margin-left: 2%;
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .mapa {
 
     height: 80%;
-    width: 90%;
-    margin-left: 20px;
+    width: 98%;
     vertical-align: top;
 
 }
@@ -115,11 +130,38 @@ html, body{
 
     height: 150px;
     background-color: #FFF8E5;
+    width: 98%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 
     -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
     -moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
 	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.47);
 
+}
+
+.status .nome_linha {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: x-large;
+    color: #9E821C;
+
+}
+
+.status .txt {
+
+    margin-top: 10px;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.lotacao, .atual, .prox {
+    font-size: large;
 }
 
 #footer{
@@ -146,4 +188,5 @@ Cores:
 Laranja: E57019
 Bege: FFF8E5
 Cinza: 383838
+Fonte: 9E821C
 */
