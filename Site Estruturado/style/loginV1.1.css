@@ -7,18 +7,16 @@
     max-width: 750px;
     text-align: center;
     align-items: center;
-    margin: 100px auto;
+    margin: 70.1px auto;
     height: 100%;
     
 }
 
 .div_primaria {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 50%;
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 20%;
+
     border-radius: 20px;
     background-color: white;
     box-shadow: 3px 3px 8px grey;
