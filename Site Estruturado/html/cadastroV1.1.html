@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro </title>
+
+    <link rel="stylesheet" href="../style/cadastroV1.1.css">
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <link rel="shortcut icon" href="../style/src/favicon.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<body>
+    
+        <div class="header">
+            
+            <div class="menu">
+                
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../style/src/bus.png" alt="Logotipo ônibus">
+                    </a>
+                </div> 
+                
+                <div class="quem-somos">
+                    <a href="./quem_somos.html">
+                        <i class="fas fa-bus"></i>
+                        Quem Somos
+                    </a>
+                </div>
+                <div class="fale-conosco">
+                    <a href="fale_conosco.html">
+                        <i class="fas fa-phone-alt"></i>
+                        Fale Conosco
+                    </a>
+                </div>
+                <div class="login">
+                    <a href="login.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class="div_primaria">
+            <img id="img_logo_box" src="../style/src/logo.jpg" alt="">
+            <h2 class="titulo"> Entre em contato conosco </h2>
+
+                <input class="input_cadastro" type="text" placeholder="CNPJ">
+
+                <input class="input_cadastro" type="text" placeholder="Razão Social">
+
+                <input id="input_email" onkeyup="checkEmail()" class="input_cadastro" type="email" placeholder="E-mail">
+
+                <input class="input_cadastro" type="number" placeholder="Telefone">
+            
+            <div class="div_secundaria">
+                <input class="input_cadastro" type="text" placeholder="Senha">
+                        <img class="img_olho" src="../style/src/invisivel_senha.png" alt="">
+            
+                <input class="input_cadastro" type="text" placeholder="Adicionar frotas">
+                        <button class="botao_add" onclick="add_frotas()"> + </button>
+            </div>
+
+                <button class="botao_entrar"> Enviar </button>
+                
+
+        </div>
+
+    </div>
+    
+    <footer>
+
+        <div class="politicas-privacidade">
+            <a href="politicas.html">
+                <i class="far fa-file-pdf"></i>
+                Politicas de privacidade
+            </a>
+        </div>
+        <div class="termos-de-uso">
+            <a href="termos.html">
+                <i class="far fa-file-alt"></i>
+                Termos de uso
+            </a>
+        </div>
+        <div class="duvidas">
+            <a href="duvidas.html">
+                <i class="far fa-question-circle"></i>
+                Dúvidas frequentes
+            </a>
+        </div>
+        
+
+    </footer>
+
+    </div>
+</body>
+</html>

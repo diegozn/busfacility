@@ -8,10 +8,10 @@
     font-family: "Poppins", sans-serif;
 }
 
- /* removendo scroll da página */
+ /* removendo scroll da página
  html, body {
     overflow: hidden;
-   }
+   } */
 
 
  /* tirando sublinhado do link */
@@ -131,14 +131,12 @@ main {
 
 
 }
-
+    
 .nav_2 div {
     padding: 0;
     border: 0;
     margin: 20px;
     background-color: #FFF8E5;
-    
-    
 }
 
 
@@ -152,6 +150,7 @@ footer {
     align-items: flex-end;
     flex-direction: row;
     
+
     border-top: 5px;
 
 }
