@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="login">
-                <a href="login.html">
+                <a href="./loginV1.1.html">
                     <i class="fas fa-sign-in-alt"></i>
                     Login
                 </a>
@@ -47,10 +47,25 @@
 
         <div class="box_seletor">
 
-            <select name="" id="filtrar">
+            <select name="" id="filtrar" onchange="filtrarFrota()">
                 <option value="">Filtrar por frota</option>
+                <option value="bandeirantes">Jd. Bandeirantes</option>
+                <option value="castelo">Jd. do Castelo</option>
+                <option value="tatuape">Shopping Tatuapé</option>
+                <option value="morumbi">Metro Morumbi</option>
             </select>
-
+            <!----
+            <select name="" id="semana" onchange="filtrarSemana()">
+                <option value="">Escolha a Semana</option>
+                <option value="segunda">Segunda-feira</option>
+                <option value="terça">Terça-feira</option>
+                <option value="quarta">Quarta-feira</option>
+                <option value="quinta">Quinta-feira</option>
+                <option value="sexta">Sexta-feira</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+            -->
         </div>
         <div class="box_main2">
             <div class="box_grafico1">
@@ -58,7 +73,7 @@
                 <div class="grafico1"><canvas id="canva1"></canvas></div>
             </div>
             <div class="box_grafico2">
-                <div class="titulo">Porcentagem de pessoas por período</div>
+                <div class="titulo">Média de pessoas por período</div>
                 <div class="marcadores">
                    <span><div id="div1"></div>Manhã</span> 
                    <span><div id="div2"></div>Tarde</span> 
@@ -96,6 +111,5 @@
     </footer>
     <script src="../script/node_modules/chart.js/dist/chart.js"></script>
     <script src="../script/dashboard1.js"></script>
-    <script src="../script/dashboard2.js"></script>
 </body>
 </html>

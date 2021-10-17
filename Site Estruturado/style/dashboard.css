@@ -60,7 +60,10 @@
     color: grey;
     border: 2px grey solid;
 
-
+}
+#semana {
+    margin-right: 600px;
+    width: 20%;
 
 }
 
