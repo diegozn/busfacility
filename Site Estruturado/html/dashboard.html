@@ -5,43 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../style/src/ícone favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/matriz.css">
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="shortcut icon" href="../style/src/favicon.ico" type="image/x-icon">
+    <script src="../script/node_modules/chart.js/dist/chart.js"></script>
+    <script src="../script/dashboard1.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="header">
-        
-        <div class="menu">
-            
-            <div class="logo">
-                <a href="index.html">
-                    <img src="../style/src/bus.png" alt="Logotipo ônibus">
-                </a>
-            </div> 
-            
-            <div class="quem-somos">
-                <a href="./quem_somos.html">
-                    <i class="fas fa-bus"></i>
-                    Quem Somos
-                </a>
-            </div>
-            <div class="fale-conosco">
-                <a href="fale_conosco.html">
-                    <i class="fas fa-phone-alt"></i>
-                    Fale Conosco
-                </a>
-            </div>
-            <div class="login">
-                <a href="./loginV1.1.html">
-                    <i class="fas fa-sign-in-alt"></i>
-                    Login
-                </a>
-            </div>
+
+    <nav id="header">
+
+        <div id="div_img">
+            <a href="./pagina_inicial.html" id="link_inicial">
+                <img id="img_logo" src="../style/src/bus.png">
+            </a>
         </div>
-        
-    </div>
+
+        <div class="links_navbar">
+            <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
+            <ul><a class="aba_nav" href="./cadastroV1.1.html"><i class="fas fa-phone-alt"></i></i>Fale conosco</a></ul>
+            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./loginV1.1.html">Login</a></ul>
+        </div>
+
+    </nav>
+
 
     <div class="box_main">
 
@@ -84,32 +72,15 @@
             </div>
         </div>
 
-    </div>
-
-    <footer>
-
-            <div class="politicas-privacidade">
-                <a href="politicas.html">
-                    <i class="far fa-file-pdf"></i>
-                    Politicas de privacidade
-                </a>
-            </div>
-            <div class="termos-de-uso">
-                <a href="termos.html">
-                    <i class="far fa-file-alt"></i>
-                    Termos de uso
-                </a>
-            </div>
-            <div class="duvidas">
-                <a href="duvidas.html">
-                    <i class="far fa-question-circle"></i>
-                    Dúvidas frequentes
-                </a>
-            </div>
-            
+    </div>        
     
+    <footer id="footer_dashboard">
+
+        <ul><a class="aba_fot" href="./politicas.html"><i class="far fa-file-pdf"></i>Políticas de Privacidade</a></ul>
+        <ul><a class="aba_fot" href="./termos.html"><i class="far fa-file-alt"></i>Termos de Uso</a></ul>
+        <ul><a class="aba_fot" href="./duvidas.html"><i class="far fa-question-circle"></i>Dúvidas Frequentes</a></ul>
+
     </footer>
-    <script src="../script/node_modules/chart.js/dist/chart.js"></script>
-    <script src="../script/dashboard1.js"></script>
+
 </body>
 </html>
