@@ -11,9 +11,6 @@ html, body{
 
 }
 
-body {
-    overflow: hidden;
-  }
 
 .links_navbar ul a {
     text-decoration: underline;
@@ -32,6 +29,7 @@ body {
  a:active {
      color: rgba(0, 0, 0, 0.37);
  }
+
 
 
 
@@ -116,4 +114,31 @@ body {
     
     display: flex;
     height: 30px;   
+}
+
+.politicas h1 {
+    align-items: center;
+}
+
+.header_politicas {
+    background: linear-gradient(to left,#ffd667, rgb(255, 165, 0) );
+    /* color: white; */
+    padding: 18px;
+    font-weight: 300;
+    transition-duration: 2s;
+    transition: all 0.7s ease;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 1px rgb(114, 112, 112);
+
+
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    
+}
+
+.header_politica:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #ffd667, rgb(255, 165, 0));
 }

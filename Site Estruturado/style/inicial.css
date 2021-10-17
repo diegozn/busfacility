@@ -10,6 +10,9 @@ html, body{
 
 }
 
+body {
+    overflow: hidden;
+  }
 
 
 .links_navbar{

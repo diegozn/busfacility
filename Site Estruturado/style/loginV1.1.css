@@ -12,6 +12,11 @@
     
 }
 
+body {
+    overflow: hidden;
+  }
+
+
 #footer_login{
 
     display: flex;
