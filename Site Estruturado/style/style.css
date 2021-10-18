@@ -8,12 +8,6 @@
     font-family: "Poppins", sans-serif;
 }
 
- /* removendo scroll da página
- html, body {
-    overflow: hidden;
-   } */
-
-
  /* tirando sublinhado do link */
 a {
     color: #000;
