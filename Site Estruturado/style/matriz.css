@@ -11,10 +11,6 @@ html, body{
 
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
 
 .links_navbar ul a {
     text-decoration: underline;
