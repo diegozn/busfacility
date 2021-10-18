@@ -1,4 +1,4 @@
-// Sempre que add novo entregavel no trello, add na variavel x
+﻿// Sempre que add novo entregavel no trello, add na variavel x
 // o valor deste entregavel em fibonnaci
 var x = 315+5;
 
@@ -18,7 +18,8 @@ var myChart = new Chart(ctx, {
                 x-15-21-20,
                 x-15-21-20-6,
                 x-15-21-20-11,
-                //completar dia 6/10
+                x-15-21-20-11-15,
+		x-15-21-20-11-15-42,
             ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
