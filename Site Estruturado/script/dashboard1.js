@@ -116,87 +116,87 @@ function setData(){
     if(frota_atual == 'bandeirantes'){
 
         h6 = (Math.random() * 10 + 25).toFixed(0);
-        h7 = (Math.random() * 10 + 25).toFixed(0);
-        h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 10 + 25).toFixed(0);
-        h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 10 + 25).toFixed(0);
-        h12 = (Math.random() * 10 + 25).toFixed(0);
-        h13 = (Math.random() * 10 + 25).toFixed(0);
-        h14 = (Math.random() * 10 + 25).toFixed(0);
-        h15 = (Math.random() * 10 + 25).toFixed(0);
-        h16 = (Math.random() * 10 + 25).toFixed(0);
-        h17 = (Math.random() * 10 + 25).toFixed(0);
+        h7 = (Math.random() * 15 + 20).toFixed(0);
+        h8 = (Math.random() * 15 + 20).toFixed(0);
+        h9 = (Math.random() * 20 + 15).toFixed(0);
+        h10 = (Math.random() * 20 + 15).toFixed(0);
+        h11 = (Math.random() * 30 + 5).toFixed(0);
+        h12 = (Math.random() * 30 + 5).toFixed(0);
+        h13 = (Math.random() * 30 + 5).toFixed(0);
+        h14 = (Math.random() * 35).toFixed(0);
+        h15 = (Math.random() * 35).toFixed(0);
+        h16 = (Math.random() * 20 + 15).toFixed(0);
+        h17 = (Math.random() * 15 + 20).toFixed(0);
         h18 = (Math.random() * 10 + 25).toFixed(0);
-        h19 = (Math.random() * 10 + 25).toFixed(0);
-        h20 = (Math.random() * 10 + 25).toFixed(0);
-        h21 = (Math.random() * 10 + 25).toFixed(0);
-        h22 = (Math.random() * 10 + 25).toFixed(0);
-        h23 = (Math.random() * 10 + 25).toFixed(0);
+        h19 = (Math.random() * 15 + 20).toFixed(0);
+        h20 = (Math.random() * 15 + 20).toFixed(0);
+        h21 = (Math.random() * 20 + 15).toFixed(0);
+        h22 = (Math.random() * 30 + 5).toFixed(0);
+        h23 = (Math.random() * 30 + 5).toFixed(0);
         
     } else if(frota_atual == 'castelo'){
         
-        h6 = (Math.random() * 10 + 25).toFixed(0);
-        h7 = (Math.random() * 10 + 25).toFixed(0);
-        h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 10 + 25).toFixed(0);
-        h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 10 + 25).toFixed(0);
-        h12 = (Math.random() * 10 + 25).toFixed(0);
-        h13 = (Math.random() * 10 + 25).toFixed(0);
-        h14 = (Math.random() * 10 + 25).toFixed(0);
-        h15 = (Math.random() * 10 + 25).toFixed(0);
-        h16 = (Math.random() * 10 + 25).toFixed(0);
-        h17 = (Math.random() * 10 + 25).toFixed(0);
-        h18 = (Math.random() * 10 + 25).toFixed(0);
+        h6 = (Math.random() * 5 + 30).toFixed(0);
+        h7 = (Math.random() * 5 + 30).toFixed(0);
+        h8 = (Math.random() * 5 + 30).toFixed(0);
+        h9 = (Math.random() * 15 + 20).toFixed(0);
+        h10 = (Math.random() * 15 + 20).toFixed(0);
+        h11 = (Math.random() * 20 + 15).toFixed(0);
+        h12 = (Math.random() * 20 + 15).toFixed(0);
+        h13 = (Math.random() * 20 + 15).toFixed(0);
+        h14 = (Math.random() * 20 + 15).toFixed(0);
+        h15 = (Math.random() * 20 + 15).toFixed(0);
+        h16 = (Math.random() * 5 + 30).toFixed(0);
+        h17 = (Math.random() * 5 + 30).toFixed(0);
+        h18 = (Math.random() * 5 + 30).toFixed(0);
         h19 = (Math.random() * 10 + 25).toFixed(0);
         h20 = (Math.random() * 10 + 25).toFixed(0);
-        h21 = (Math.random() * 10 + 25).toFixed(0);
-        h22 = (Math.random() * 10 + 25).toFixed(0);
-        h23 = (Math.random() * 10 + 25).toFixed(0);
+        h21 = (Math.random() * 15 + 20).toFixed(0);
+        h22 = (Math.random() * 15 + 20).toFixed(0);
+        h23 = (Math.random() * 30 + 5).toFixed(0);
 
 
     } else if(frota_atual == 'tatuape'){
         
-        h6 = (Math.random() * 10 + 25).toFixed(0);
-        h7 = (Math.random() * 10 + 25).toFixed(0);
+        h6 = (Math.random() * 15 + 20).toFixed(0);
+        h7 = (Math.random() * 15 + 20).toFixed(0);
         h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 10 + 25).toFixed(0);
+        h9 = (Math.random() * 15 + 20).toFixed(0);
         h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 10 + 25).toFixed(0);
+        h11 = (Math.random() * 20 + 15).toFixed(0);
         h12 = (Math.random() * 10 + 25).toFixed(0);
-        h13 = (Math.random() * 10 + 25).toFixed(0);
-        h14 = (Math.random() * 10 + 25).toFixed(0);
-        h15 = (Math.random() * 10 + 25).toFixed(0);
+        h13 = (Math.random() * 15 + 20).toFixed(0);
+        h14 = (Math.random() * 20 + 15).toFixed(0);
+        h15 = (Math.random() * 20 + 15).toFixed(0);
         h16 = (Math.random() * 10 + 25).toFixed(0);
-        h17 = (Math.random() * 10 + 25).toFixed(0);
-        h18 = (Math.random() * 10 + 25).toFixed(0);
-        h19 = (Math.random() * 10 + 25).toFixed(0);
-        h20 = (Math.random() * 10 + 25).toFixed(0);
+        h17 = (Math.random() * 20 + 15).toFixed(0);
+        h18 = (Math.random() * 15 + 20).toFixed(0);
+        h19 = (Math.random() * 15 + 20).toFixed(0);
+        h20 = (Math.random() * 5 + 30).toFixed(0);
         h21 = (Math.random() * 10 + 25).toFixed(0);
-        h22 = (Math.random() * 10 + 25).toFixed(0);
-        h23 = (Math.random() * 10 + 25).toFixed(0);
+        h22 = (Math.random() * 20 + 15).toFixed(0);
+        h23 = (Math.random() * 30 + 5).toFixed(0);
 
     } else if(frota_atual == 'morumbi'){
         
-        h6 = (Math.random() * 10 + 25).toFixed(0);
-        h7 = (Math.random() * 10 + 25).toFixed(0);
+        h6 = (Math.random() * 5 + 30).toFixed(0);
+        h7 = (Math.random() * 5 + 30).toFixed(0);
         h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 10 + 25).toFixed(0);
+        h9 = (Math.random() * 5 + 30).toFixed(0);
         h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 10 + 25).toFixed(0);
-        h12 = (Math.random() * 10 + 25).toFixed(0);
+        h11 = (Math.random() * 20 + 15).toFixed(0);
+        h12 = (Math.random() * 20 + 15).toFixed(0);
         h13 = (Math.random() * 10 + 25).toFixed(0);
-        h14 = (Math.random() * 10 + 25).toFixed(0);
+        h14 = (Math.random() * 20 + 15).toFixed(0);
         h15 = (Math.random() * 10 + 25).toFixed(0);
-        h16 = (Math.random() * 10 + 25).toFixed(0);
+        h16 = (Math.random() * 20 + 15).toFixed(0);
         h17 = (Math.random() * 10 + 25).toFixed(0);
-        h18 = (Math.random() * 10 + 25).toFixed(0);
-        h19 = (Math.random() * 10 + 25).toFixed(0);
-        h20 = (Math.random() * 10 + 25).toFixed(0);
-        h21 = (Math.random() * 10 + 25).toFixed(0);
-        h22 = (Math.random() * 10 + 25).toFixed(0);
-        h23 = (Math.random() * 10 + 25).toFixed(0);
+        h18 = (Math.random() * 15 + 20).toFixed(0);
+        h19 = (Math.random() * 15 + 20).toFixed(0);
+        h20 = (Math.random() * 15 + 20).toFixed(0);
+        h21 = (Math.random() * 20 + 15).toFixed(0);
+        h22 = (Math.random() * 20 + 15).toFixed(0);
+        h23 = (Math.random() * 30 + 5).toFixed(0);
 
     } else {
 
