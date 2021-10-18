@@ -8,6 +8,17 @@ html, body{
     height: 100%;
     font-size: large;
 }
+
+body {
+    background-image: url(src/mapbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+#texto {
+    background-color: white;
+}
+
+
 h2 {
     text-align: center;
     color: black;

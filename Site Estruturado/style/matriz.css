@@ -110,6 +110,42 @@ html, body{
     
 }
 
+#footer_politica {
+
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #383838ab;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    
+    margin-top: 1.4%;
+    height: 4.6%;
+  
+
+}
+
+#footer_calculadora {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #383838ab;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    
+    margin-top: 14.6%;
+    height: 4.6%;
+}
+
+
+
+.texto_politica {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 
 .aba_fot {
     color: black;
@@ -124,6 +160,9 @@ html, body{
 .politicas h1 {
     align-items: center;
 }
+
+
+
 
 .header_politicas {
     background: linear-gradient(to left,#ffd667, rgb(255, 165, 0) );
@@ -147,3 +186,4 @@ html, body{
     letter-spacing: 0.5px;
     background: linear-gradient(to right, #ffd667, rgb(255, 165, 0));
 }
+
