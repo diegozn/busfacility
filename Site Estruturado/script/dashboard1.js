@@ -11,8 +11,7 @@ filtrar.value = ``;
 function main(){
 
     setData()
-    graficoBarra()
-    graficoPizza()
+    trocaSemana()
 
 }
 
@@ -21,9 +20,15 @@ function trocaSemana(){
     if(semana_atual == ""){
         document.getElementById('canva3').id='canva1';
         graficoBarra()
-    } 
-
+        graficoPizza()
+    } else {
+        document.getElementById('canva1').id='canva3';
+        graficoSemana()
+    }
+    
 }
+
+
 function limparGrafico(){
 
     if(myChart1 != undefined){
@@ -40,7 +45,9 @@ function limparGrafico(){
 
 function filtrarSemana(){
 
+    limparGrafico()
     semana_atual = semana.value;
+    main()
 
 }
 
@@ -140,7 +147,7 @@ function graficoSemana(){
     data: {
         labels: ['6h','7h', '8h', '9h', '10h', '11h', '12h','13h','14h', '15h','16h','17h','18h','19h','20h','21h','22h','23h'],
         datasets: [{
-            label: 'Nº de Passageiros',
+            label: semana_atual,
             data: [h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23],
             backgroundColor: [
                 '#C53434',
