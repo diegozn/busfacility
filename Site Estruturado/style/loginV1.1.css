@@ -1,6 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
+body {
+    overflow-y: hidden;
 }
 
 .container_login { 
@@ -8,7 +7,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    min-height: 83%;
+    min-height: 81%;
     
 }
 
@@ -36,6 +35,11 @@
     font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
     font-weight: normal;
     padding: 20px;
+}
+
+.texto {
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
 }
 
 .input_login {

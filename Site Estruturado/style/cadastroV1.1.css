@@ -1,24 +1,21 @@
+body {
+    overflow-y: hidden;
+}
+
 .container_cadastro { 
-    max-width: 750px;
+    display: flex;
     text-align: center;
     align-items: center;
-    margin: 0 auto;
-   
+    justify-content: center;
+    min-height: 83%;
     
 }
 
-body {
-    overflow: hidden;
-  }
-
-
 .div_primaria {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 25%;
     text-align: center;
-    margin-top: 2%;
-    /* margin-bottom: 20%; */
+
     border-radius: 20px;
     background-color: white;
     box-shadow: 3px 3px 8px grey;
@@ -44,7 +41,7 @@ body {
     width: 50%;
     height: 80%;
     padding: 8px 20px;
-    margin: 12px auto;
+    margin: 8px auto;
     border-radius: 6px;
     border-width: 2px;
     display: flex;
@@ -64,15 +61,6 @@ body {
 
 }
 
-.botao_add {
-    padding: 8px 12px;
-    background-color: whitesmoke;
-    border-radius: 8px;
-    border-width: 1px;
-    border: 1px solid;
-    display: unset;
-}
-
 .botao_enviar {
     font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
@@ -82,4 +70,9 @@ body {
     padding: 5px 50px 5px 50px;
     border-radius: 8px;
     border: 1px solid;
+}
+
+#footer{
+    margin-top: unset;
+
 }
