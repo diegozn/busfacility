@@ -9,14 +9,14 @@ var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
 
 
 
-function main(){
+function main(){ //
 
     setData()
-    troca()
+    mostraGrafico()
 
 }
 
-function troca(){
+function mostraGrafico(){ // Troca os tipos de graficos
     
     
     if(semana_atual == undefined || semana_atual == "x"){
@@ -25,32 +25,36 @@ function troca(){
         canva1.style.display = 'flex';
         graficoBarra()
         graficoPizza()
+
     } else {
         console.log(semana_atual)
         canva1.style.display = 'none';
         canva3.style.display = 'flex';
         graficoSemana()
         graficoPizza()
+
     }
     
 }
 
 
-function limparGrafico(){
+function limparGrafico(){ //Para criar um gráfico novo é preciso destruir o anterior
 
     if(myChart1 != undefined){
         myChart1.destroy();
     }
+
     if(myChart2 != undefined){
         myChart2.destroy();
     }
+
     if(myChart3 != undefined){
         myChart3.destroy();
     }
 
 }
 
-function filtrarSemana(){
+function filtrarSemana(){ // Executa quando troca o select de semana
 
     limparGrafico()
     semana_atual = semana.value;
@@ -60,7 +64,7 @@ function filtrarSemana(){
 
 
 
-function filtrarFrota(){ 
+function filtrarFrota(){ // Executa quando troca o select de frota
 
     limparGrafico()
     frota_atual = filtrar.value;
@@ -69,8 +73,8 @@ function filtrarFrota(){
 }
 
 
-function graficoBarra(){
-    // Gráfico de Barra
+function graficoBarra(){// Cria o gráfico de barra
+    
 var ctx = document.getElementById('canva1').getContext('2d');
 myChart1 = new Chart(ctx, {
     type: 'bar',
@@ -110,7 +114,7 @@ myChart1 = new Chart(ctx, {
 
 
 
-function graficoPizza(){
+function graficoPizza(){// Cria o gráfico de pizza
 
 var manha = (Number(h6) + Number(h7) + Number(h8) + Number(h9) + Number(h10) + Number(h11))/6
 var tarde = (Number(h12) + Number(h13) + Number(h14) + Number(h15) + Number(h16) + Number(h17))/6
@@ -120,7 +124,7 @@ var porcent_manha = (manha * 100) / total;
 var porcent_tarde = (tarde * 100) / total;
 var porcent_noite = (noite * 100) / total;
 
-// Gráfico de pizza
+
 var ctx = document.getElementById('canva2').getContext('2d');
 myChart2 = new Chart(ctx, {
     type: 'pie',
@@ -146,7 +150,7 @@ myChart2 = new Chart(ctx, {
 });
 }
 
-function graficoSemana(){
+function graficoSemana(){ // Cria o gráfico de semana
     // Gráfico da Semana
     var ctx = document.getElementById('canva3').getContext('2d');
     myChart3 = new Chart(ctx, {
@@ -188,7 +192,7 @@ function graficoSemana(){
 }
 
 
-function setData(){
+function setData(){ // Gera numeros aleatórios para cada hora toda vez que for chamado
 
     if(frota_atual == 'bandeirantes'){
 
@@ -300,7 +304,7 @@ function setData(){
 
 }
 
-function recarregar(){
+function recarregar(){ // Executa ao recarregar a página
 
     filtrar.value = ``;
     semana.value = 'x';
