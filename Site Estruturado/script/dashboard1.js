@@ -6,24 +6,31 @@ var myChart3;
 var frota_atual;
 var semana_atual;
 var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
-filtrar.value = ``;
+
+
 
 function main(){
 
     setData()
-    trocaSemana()
+    troca()
 
 }
 
-function trocaSemana(){
-
-    if(semana_atual == ""){
-        document.getElementById('canva3').id='canva1';
+function troca(){
+    
+    
+    if(semana_atual == undefined || semana_atual == "x"){
+        console.log(semana_atual)
+        canva3.style.display = 'none';
+        canva1.style.display = 'flex';
         graficoBarra()
         graficoPizza()
     } else {
-        document.getElementById('canva1').id='canva3';
+        console.log(semana_atual)
+        canva1.style.display = 'none';
+        canva3.style.display = 'flex';
         graficoSemana()
+        graficoPizza()
     }
     
 }
@@ -290,6 +297,15 @@ function setData(){
         h23 = 0
 
     }
+
+}
+
+function recarregar(){
+
+    filtrar.value = ``;
+    semana.value = 'x';
+    var user = localStorage.getItem('social');
+    usuario.innerHTML = `${user}!`
 
 }
 

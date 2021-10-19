@@ -13,7 +13,7 @@
     <script src="../script/dashboard1.js"></script>
     <title>Dashboard</title>
 </head>
-<body>
+<body onload="recarregar()">
 
     <nav id="header">
 
@@ -26,7 +26,7 @@
         <div class="links_navbar">
             <ul><a class="aba_nav" href="./quem_somos.html"><i class="fas fa-bus"></i>Quem somos</a></ul>
             <ul><a class="aba_nav" href="./cadastroV1.1.html"><i class="fas fa-phone-alt"></i></i>Fale conosco</a></ul>
-            <ul><i class="fas fa-sign-in-alt"></i><a class="aba_nav" href="./loginV1.1.html">Login</a></ul>
+            <ul><a class="aba_nav" href="./loginV1.1.html">Olá, <span id="usuario"></span></a></ul>
         </div>
 
     </nav>
@@ -45,7 +45,7 @@
             </select>
             
             <select name="" id="semana" onchange="filtrarSemana()">
-                <option value="">Filtrar por Semana</option>
+                <option value="x">Filtrar por Semana</option>
                 <option value="segunda">Segunda-feira</option>
                 <option value="terça">Terça-feira</option>
                 <option value="quarta">Quarta-feira</option>
@@ -60,6 +60,7 @@
             <div class="box_grafico1">
                 <div class="titulo">Média de pessoas por horário</div>
                 <div class="grafico1"><canvas id="canva1"></canvas></div>
+                <div class="grafico1"><canvas id="canva3"></canvas></div>
             </div>
             <div class="box_grafico2">
                 <div class="titulo">Média de pessoas por período</div>
