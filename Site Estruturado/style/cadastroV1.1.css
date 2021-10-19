@@ -52,6 +52,7 @@ body {
         width: 45%;
         margin-left: 30px;
         display: unset;
+        padding-inline-end: 36px;
 }
 
 .div_secundaria .img_olho {
