@@ -9,11 +9,7 @@ html, body{
     font-size: large;
 }
 
-body {
-    background-image: url(src/mapbackground.png);
-    background-repeat: no-repeat;
-    background-size: cover ;
-}
+
 #texto {
     background-color: white;
 }
@@ -41,6 +37,12 @@ li:hover{
     margin: 0 auto;
 
 }
+
+.main {
+    min-height: 77%;
+}
+
+
 .header {
 
     background-color: #E57019;
@@ -181,6 +183,10 @@ li:hover{
     font-weight: bolder;
     
 
+}
+
+.btn_calc {
+    border-radius: 10px;
 }
 
 
