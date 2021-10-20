@@ -76,7 +76,13 @@ body {
     border: 1px solid;
 }
 
+#clique_aqui {
+    color: rgba(0, 0, 255, 0.672);
+}
 
+.botao_entrar {
+    cursor: pointer;
+}
 
 
 
