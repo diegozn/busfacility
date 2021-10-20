@@ -34,10 +34,12 @@ function validarLogin(){
 
     email = localStorage.getItem('email')
     senha = localStorage.getItem('senha')
+    
 
-    if(email == input_login.value && senha == input_senha_3.value){
+    if(email == login_input.value && senha == input_senha_3.value){
         acesso = true;
     } else {
+        alert("Usuario ou senha inválido!")
         acesso = false;
     }
 

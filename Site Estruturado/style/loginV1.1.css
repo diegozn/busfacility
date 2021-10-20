@@ -75,6 +75,10 @@ body {
     border-radius: 8px;
     border: 1px solid;
 }
+.botao_entrar:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
 
 #clique_aqui {
     color: rgba(0, 0, 255, 0.672);

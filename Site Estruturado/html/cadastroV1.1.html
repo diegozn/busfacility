@@ -50,15 +50,15 @@
 
                 <input id="input_social" class="input_cadastro" type="text" placeholder="Razão Social">
 
-                <input onclick="voltarBordaEmail()" id="input_email" class="input_cadastro" type="email" placeholder="E-mail">
+                <input onclick="voltarBordaEmail()" onchange="mudarBordaEmail()" id="input_email" class="input_cadastro" type="email" placeholder="E-mail*">
 
                 <input id="input_telefone" class="input_cadastro" type="number" placeholder="Telefone">
             
             <div class="div_secundaria">
-                <input onclick="voltarBordaSenha1()" id="input_senha_1" class="input_cadastro" type="password" placeholder="Senha">
+                <input onclick="voltarBordaSenha1()" onchange="mudarBordaSenha1()" id="input_senha_1" class="input_cadastro" type="password" placeholder="Senha*">
                         <img id="imagem_olho" onclick="mostrarSenha()" class="img_olho" src="../style/src/invisivel_senha.png" alt="">
             
-                <input onclick="voltarBordaSenha2()" id="input_senha_2" class="input_cadastro" type="password" placeholder="Confirme sua senha">
+                <input onclick="voltarBordaSenha2()" onchange="mudarBordaSenha2()" id="input_senha_2" class="input_cadastro" type="password" placeholder="Confirme sua senha*">
                     <img id="imagem_olho_2" onclick="mostrarSenha_2()" class="img_olho" src="../style/src/invisivel_senha.png" alt="">
             </div>
 
@@ -72,7 +72,7 @@
             
                 <span id="span_quadro">
                 <p>O email deve conter um '@' e terminar com '.com'</p>
-                <p>A senha deve conter pelo menos oito caracteres</p>
+                <p>A senha deve conter pelo menos 8 caracteres</p>
                 </span>
         
         </div>

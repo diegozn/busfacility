@@ -5,9 +5,6 @@ var key_senha2 = false;
 var dica_ativa = false;
 
 function enviarCadastro(){
-
-    checkEmail()
-    validarSenha()
     
     console.log(key_email,key_senha1,key_senha2)
     if(key_email == true && key_senha1 == true && key_senha2 == true){
@@ -17,46 +14,7 @@ function enviarCadastro(){
 
 }
 
-function checkEmail(){
 
-
-    if(input_email.value.indexOf('@') != -1 && input_email.value.endsWith('.com')){
-        validado(input_email)
-        key_email = true;
-    } else {
-        alerta(input_email)
-        key_email = false;
-    }
-
-}
-
-function validarSenha(){
-    
-    if(input_senha_1.value.length < 8){
-
-        alerta(input_senha_1);
-        key_senha1 = false;
-
-    } else {
-
-        validado(input_senha_1)
-        key_senha1 = true;
-
-    }
-
-    if(input_senha_1.value != input_senha_2.value || input_senha_2.value == '') {
-
-        alerta(input_senha_2);
-        key_senha2 = false;
-    } else {
-
-        validado(input_senha_2)
-        key_senha2 = true;
-    }
- 
-
-
-}
 
 function mostrarSenha(){
 
@@ -101,7 +59,7 @@ function cadastrar(){
     localStorage.setItem('telefone',input_telefone.value);
     localStorage.setItem('senha',input_senha_1.value);
     alert('Cadastro concluído com sucesso!')
-    console.log('cadastrou')
+    window.location.href = '../html/loginV1.1.html'
     
 }
 
@@ -110,9 +68,50 @@ function alerta(self){
     self.style.border = '1px solid red';
     self.style.backgroundColor = '#FA8072';
     self.placeholder = '⚠';
-    self.value = ``;
+    //self.value = ``;
 
 
+}
+
+
+function mudarBordaEmail(){
+
+    if(input_email.value.indexOf('@') != -1 && input_email.value.endsWith('.com')){
+        validado(input_email)
+        key_email = true;
+    } else {
+        alerta(input_email)
+        key_email = false;
+    }
+
+}
+function mudarBordaSenha1(){
+
+    if(input_senha_1.value.length < 8){
+
+        alerta(input_senha_1);
+        key_senha1 = false;
+
+    } else {
+
+        validado(input_senha_1)
+        key_senha1 = true;
+
+    }
+
+}
+function mudarBordaSenha2(){
+
+    if(input_senha_1.value != input_senha_2.value || input_senha_2.value == '') {
+
+        alerta(input_senha_2);
+        key_senha2 = false;
+    } else {
+
+        validado(input_senha_2)
+        key_senha2 = true;
+    }
+    
 }
 
 function validado(self){
