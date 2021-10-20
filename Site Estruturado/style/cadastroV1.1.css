@@ -73,6 +73,15 @@ body {
     border: 1px solid;
 }
 
+
+#id_enviarCadastror {
+    cursor: pointer;
+}
+
+
+
+
+
 #footer{
     margin-top: unset;
 
