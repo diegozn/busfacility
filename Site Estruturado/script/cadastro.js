@@ -1,22 +1,60 @@
-var email;
 
+var key_email = false;
+var key_senha1 = false;
+var key_senha2 = false;
+var dica_ativa = false;
 
 function enviarCadastro(){
 
-    cadastrar()
+    checkEmail()
+    validarSenha()
+    
+    console.log(key_email,key_senha1,key_senha2)
+    if(key_email == true && key_senha1 == true && key_senha2 == true){
+        
+        cadastrar()
+    }
 
 }
 
 function checkEmail(){
 
-    email = input_email.value;
-    console.log(email)
 
-    if(email.indexOf('@') == -1){
-        
+    if(input_email.value.indexOf('@') != -1 && input_email.value.endsWith('.com')){
+        validado(input_email)
+        key_email = true;
     } else {
-        alert('email valido')
+        alerta(input_email)
+        key_email = false;
     }
+
+}
+
+function validarSenha(){
+    
+    if(input_senha_1.value.length < 8){
+
+        alerta(input_senha_1);
+        key_senha1 = false;
+
+    } else {
+
+        validado(input_senha_1)
+        key_senha1 = true;
+
+    }
+
+    if(input_senha_1.value != input_senha_2.value || input_senha_2.value == '') {
+
+        alerta(input_senha_2);
+        key_senha2 = false;
+    } else {
+
+        validado(input_senha_2)
+        key_senha2 = true;
+    }
+ 
+
 
 }
 
@@ -52,10 +90,8 @@ function mostrarSenha_2(){
 
     }
 
-};
+}
     
-
-
 
 function cadastrar(){
     
@@ -64,5 +100,66 @@ function cadastrar(){
     localStorage.setItem('email',input_email.value);
     localStorage.setItem('telefone',input_telefone.value);
     localStorage.setItem('senha',input_senha_1.value);
+    alert('Cadastro concluído com sucesso!')
+    console.log('cadastrou')
     
+}
+
+function alerta(self){
+
+    self.style.border = '1px solid red';
+    self.style.backgroundColor = '#FA8072';
+    self.placeholder = '⚠';
+    self.value = ``;
+
+
+}
+
+function validado(self){
+
+    self.style.border = '1px solid green';
+    self.style.backgroundColor = '#90EE90';
+    //self.placeholder = '✔';
+    //self.value = ``;
+
+}
+
+function voltarBordaEmail(){
+
+    input_email.style.border = '1px solid black';
+    input_email.style.backgroundColor = '#fff';
+    input_email.placeholder = 'E-mail';
+
+}
+function voltarBordaSenha1(){
+
+    input_senha_1.style.border = '1px solid black';
+    input_senha_1.style.backgroundColor = '#fff';
+    input_senha_1.placeholder = 'Senha';
+}
+function voltarBordaSenha2(){
+
+    input_senha_2.style.border = '1px solid black';
+    input_senha_2.style.backgroundColor = '#fff';
+    input_senha_2.placeholder = 'Confirme sua senha';
+    
+}
+function limparCache(){
+
+    input_email.value = ``;
+    input_senha_1.value = ``;
+    input_senha_2.value = ``;
+
+}
+function dica(){
+
+    if(dica_ativa == false){
+        quadro.style.display = 'block';
+        dica_ativa = true;
+    } else {
+        quadro.style.display = 'none';
+        dica_ativa = false;
+    }
+    
+
 }

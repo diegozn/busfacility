@@ -1,3 +1,19 @@
+var login;
+var senha;
+var acesso = false;
+
+
+function entrarLogin(){
+
+    validarLogin()
+    
+    if(acesso == true){
+        window.location.href = '../html/dashboard.html'
+    }
+
+}
+
+
 function mostrarSenha(){
 
     var tipo_olho_3 = input_senha_3.type;
@@ -12,4 +28,17 @@ function mostrarSenha(){
         input_senha_3.type = 'password';
         imagem_olho.src = "../style/src/invisivel_senha.png";
     }
+}
+
+function validarLogin(){
+
+    email = localStorage.getItem('email')
+    senha = localStorage.getItem('senha')
+
+    if(email == input_login.value && senha == input_senha_3.value){
+        acesso = true;
+    } else {
+        acesso = false;
+    }
+
 }
