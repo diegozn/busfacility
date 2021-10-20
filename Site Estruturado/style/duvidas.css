@@ -101,7 +101,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 h2 {
@@ -119,29 +118,24 @@ li:hover{
     color: #F22B0C;
 }
 
-.acordeon {
+.pergunta {
 background-color:  #eee;
 color: #444;
 cursor: pointer;
-padding: 18px;
 width: 100%;
 border: none;
+padding: 13px;
 text-align: left;
-outline: none;
 font-size: 15px;
-transition: 0.5s;
 }
 
-.painel {
-padding: 0 18px;
+.resposta {
+    display: none;
 background-color: #fff;
-max-height: 0px;
-overflow: hidden;
-transition: ease-out;
-max-height: 0.3s;
+text-align: center;
 }
 
-.selecionado, .acordeon:hover {
+.pergunta:hover {
  background-color: #ccc;
 }
 
