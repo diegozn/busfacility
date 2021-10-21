@@ -20,7 +20,6 @@ function pesquisar() {
         ale2.style.display = 'none'
         ale3.style.display = 'none'
         ale4.style.display = 'none'
-        ale5.style.display = 'none'
     }
 
     else if (pesquisa.startsWith ('m') || pesquisa.startsWith ('me') || pesquisa.startsWith ('met') || pesquisa.startsWith ('metr') || pesquisa.startsWith ('metro')) {
@@ -43,7 +42,6 @@ function pesquisar() {
         ale2.style.display = 'none'
         ale3.style.display = 'none'
         ale4.style.display = 'none'
-        ale5.style.display = 'none'
     }
 
     else {
@@ -64,6 +62,5 @@ function pesquisar() {
         ale2.style.display = 'block'
         ale3.style.display = 'block'
         ale4.style.display = 'block'
-        ale5.style.display = 'block'
     }
 }
