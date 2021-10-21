@@ -6,7 +6,7 @@ var dica_ativa = false;
 
 function enviarCadastro(){
     
-    console.log(key_email,key_senha1,key_senha2)
+    //console.log(key_email,key_senha1,key_senha2)
     if(key_email == true && key_senha1 == true && key_senha2 == true){
         
         cadastrar()
