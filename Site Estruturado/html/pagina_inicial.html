@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../style/inicial.css">
     <link rel="shortcut icon" href="../style/src/¡cone favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -34,20 +34,35 @@
     <div class="banner">
 
         <div class="container">
-            
+
             <div class="lista">
-                <input  type="text" placeholder="Digite nome do ônibus... ">
-                <ul><a href="">Jd. Bandeirantes</a></ul>
-                <ul><a href="">Jd. Do Castelo</a></ul>
-                <ul><a href="">Shopping Tatuapé</a></ul>
-                <ul><a href="">Metro Morumbi</a></ul>
+                <input type="text" id="ipt_pesquisa" onchange="pesquisar()" placeholder="Digite nome do ônibus... ">
+                <ul>
+                    <li class="jd">Jd. Bandeirantes</li>
+                    <li class="jd">Jd. Do Castelo</li>
+                    <li>Shopping Tatuapé</li>
+                    <li class="metro">Metro Morumbi</li>
+                    <li>Term. Pq. D. Pedro</li>
+                    <li>Ponte Rasa</li>
+                    <li class="metro">Metro Penha</li>
+                    <li class="jd">Jd. Ângela</li>
+                    <li>Term. Tiradentes</li>
+                    <li class="metro">Metro Tucuruvi</li>
+                    <li>Erm. Matarazzo</li>
+                    <li class="jd">Jd. Italia</li>
+                    <li class="metro">Metro Tatuapé</li>
+                    <li class="jd">Jd. Osasco</li>
+                    <li class="metro">Metro Vl. Matilde</li>
+                </ul>
             </div>
 
             <div class="mapa_status">
 
-            
 
-                    <iframe class="mapa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.7215919494629%2C-23.618103426136084%2C-46.5900993347168%2C-23.523385267512115&amp;layer=transportmap" style="border: 1px solid black"></iframe>
+
+                <iframe class="mapa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-46.7215919494629%2C-23.618103426136084%2C-46.5900993347168%2C-23.523385267512115&amp;layer=transportmap"
+                    style="border: 1px solid black"></iframe>
                 <div class="status">
 
                     <div class="nome_linha">
@@ -59,28 +74,34 @@
 
                         <div class="lotacao">
 
-                            <ul>8481 - 50/50 pessoas</ul>
-                            <ul>2009 - 25/65 pessoas</ul>
-                            <ul>5724 - 15/42 pessoas</ul>
-                            <ul>6389 - 22/35 pessoas</ul>
+                            <ul>
+                                <li>8481 - 50/50 pessoas</li>
+                                <li>2009 - 25/65 pessoas</li>
+                                <li>5724 - 15/42 pessoas</li>
+                                <li>6389 - 22/35 pessoas</li>
+                            </ul>
 
                         </div>
 
                         <div class="atual">
 
-                            <ul>Local atual: R. Capitão Cívil</ul>
-                            <ul>Local atual: R. Gabriel Barbosa</ul>
-                            <ul>Local atual: R. Luiz César Souza</ul>
-                            <ul>Local atual: R. R. Chapada da Diamantina</ul>
+                            <ul>
+                                <li>Local atual: R. Capitão Cívil</li>
+                                <li>Local atual: R. Gabriel Barbosa</li>
+                                <li>Local atual: R. Luiz César Souza</li>
+                                <li>Local atual: R. R. Chapada da Diamantina</li>
+                            </ul>
 
                         </div>
 
                         <div class="prox">
 
-                            <ul>Prox. Ponto: 5 min</ul>
-                            <ul>Prox. Ponto: 25 min</ul>
-                            <ul>Prox. Ponto: 2 min</ul>
-                            <ul>Prox. Ponto: 12 min</ul>
+                            <ul>
+                                <li>Prox. Ponto: 5 min</li>
+                                <li>Prox. Ponto: 25 min</li>
+                                <li>Prox. Ponto: 2 min</li>
+                                <li>Prox. Ponto: 12 min</li>
+                            </ul>
 
                         </div>
 
@@ -102,6 +123,7 @@
 
     </footer>
 
+    <script type="text/javascript" src="../script/inicial.js"></script>
 </body>
 
 </html>

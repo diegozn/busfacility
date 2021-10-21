@@ -97,8 +97,6 @@ a {
     letter-spacing: 0.5px;  
 }
 
-
-
 .banner {
 
     width: 100%;
@@ -148,6 +146,15 @@ a {
 .lista ul {
     margin: 10px;
     padding-left: 10px;
+}
+
+.lista li {
+    list-style: none;
+    margin: 10px;
+}
+
+li {
+    list-style: none;
 }
 
 .mapa_status {
