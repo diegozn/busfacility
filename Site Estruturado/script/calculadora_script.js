@@ -30,5 +30,6 @@ function voltar(){
     ipt_gasolina.value = ''
     ipt_passageiros.value = ''
     ipt_onibus.value = ''
+    ipt_vez.value = ''
 
 }
