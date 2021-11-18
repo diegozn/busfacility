@@ -1,7 +1,6 @@
 create database Busfacility;
 use Busfacility;
 
-
 CREATE TABLE Empresa (
     idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
     nomeEmpresa VARCHAR(50),

@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cadastre-se </title>
 
-    <link rel="stylesheet" href="../style/matriz.css">
-    <link rel="stylesheet" href="../style/cadastro.css">
+    <link rel="stylesheet" href="./style/matriz.css">
+    <link rel="stylesheet" href="./style/cadastro.css">
 
-    <link rel="shortcut icon" href="../style/src/¡cone favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="../style/src/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./style/src/¡cone favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
     
     <script src="./js/funcoes.js"></script>
-    <script src="../js/cadastro.js"></script>
+    <script src="./js/cadastro.js"></script>
     <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
 
     
@@ -29,7 +29,7 @@
 
         <div id="div_img">
             <a href="./pagina_inicial.html" id="link_inicial">
-                <img id="img_logo" src="../style/src/bus.png">
+                <img id="img_logo" src="./style/src/bus.png">
             </a>
         </div>
 
@@ -46,7 +46,7 @@
     <div class="container_cadastro">
 
         <div class="div_primaria">
-            <img id="img_logo_box" src="../style/src/logo.jpg" alt="">
+            <img id="img_logo_box" src="./style/src/logo.jpg" alt="">
             <h2 class="titulo"> Entre em contato conosco </h2>
 
                 <input id="input_cnpj" class="input_cadastro" type="text" placeholder="CNPJ">
@@ -59,10 +59,10 @@
             
             <div class="div_secundaria">
                 <input onclick="voltarBordaSenha1()" onchange="mudarBordaSenha1()" id="input_senha_1" class="input_cadastro" type="password" placeholder="Senha*">
-                        <img id="imagem_olho" onclick="mostrarSenha()" class="img_olho" src="../style/src/invisivel_senha.png" alt="">
+                        <img id="imagem_olho" onclick="mostrarSenha()" class="img_olho" src="./style/src/invisivel_senha.png" alt="">
             
                 <input onclick="voltarBordaSenha2()" onchange="mudarBordaSenha2()" id="input_senha_2" class="input_cadastro" type="password" placeholder="Confirme sua senha*">
-                    <img id="imagem_olho_2" onclick="mostrarSenha_2()" class="img_olho" src="../style/src/invisivel_senha.png" alt="">
+                    <img id="imagem_olho_2" onclick="mostrarSenha_2()" class="img_olho" src="./style/src/invisivel_senha.png" alt="">
             </div>
 
                 <button id="id_enviarCadastro" onclick="cadastrar()" class="botao_enviar"> Enviar </button>
@@ -77,10 +77,6 @@
                 <p>A senha deve conter pelo menos 8 caracteres</p>
                 </span>
         
-        </div>
-
-        <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif">
         </div>
 
     </div>
@@ -104,7 +100,6 @@
 <script>
 
     function cadastrar() {
-        aguardar();
 
         var nomeVar = input_social.value;
         var emailVar = input_email.value;
@@ -126,19 +121,16 @@
             if (confirmacaoSenhaVar == "") {
                 console.log('confirmacaoSenha está em branco')
             }
-            finalizarAguardar();
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
             return false;
         }
 
         if (senhaVar != confirmacaoSenhaVar) {
             window.alert("As senhas inseridas devem ser iguais para prosseguir!");
-            finalizarAguardar();
             return false;
         }
 
@@ -160,13 +152,11 @@
                 window.alert("Cadastro realizado com sucesso!");
                 window.location = "login.html";
                 limparFormulario();
-                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
 
         return false;
