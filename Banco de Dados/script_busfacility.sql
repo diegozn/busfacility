@@ -12,12 +12,6 @@ CREATE TABLE Empresa (
     senha VARCHAR(10)
 )  AUTO_INCREMENT = 1;
 
-CREATE TABLE Motorista (
-    idMotorista INT PRIMARY KEY AUTO_INCREMENT,
-    nomeMotorista VARCHAR(50),
-    telefoneMotorista VARCHAR(50)
-) AUTO_INCREMENT = 11;
-
 CREATE TABLE Itinerario (
     idItinerario INT PRIMARY KEY AUTO_INCREMENT,
     nomeLinha VARCHAR(30),
@@ -31,10 +25,7 @@ CREATE TABLE Onibus (
     placa VARCHAR(10),
     fkEmpresa INT,
     FOREIGN KEY (fkEmpresa)
-        REFERENCES Empresa (idEmpresa),
-    fkMotorista INT,
-    FOREIGN KEY (fkMotorista)
-        REFERENCES Motorista (idMotorista)
+        REFERENCES Empresa (idEmpresa)
 ) AUTO_INCREMENT = 201;
 
 CREATE TABLE Sensor (
@@ -46,17 +37,6 @@ CREATE TABLE Sensor (
         REFERENCES Onibus (idOnibus)
 ) AUTO_INCREMENT = 301;
 
-CREATE TABLE InfoOnibus (
-    idInfo INT PRIMARY KEY AUTO_INCREMENT,
-    mediaPassageiros INT,
-    fkItinerario INT,
-    FOREIGN KEY (fkItinerario)
-        REFERENCES Itinerario (idItinerario),
-    fkOnibus INT,
-    FOREIGN KEY (fkOnibus)
-        REFERENCES Onibus (idOnibus)
-) AUTO_INCREMENT = 401;
-
 CREATE TABLE Registro (
     idRegistro INT PRIMARY KEY AUTO_INCREMENT,
     dataHora DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -66,14 +46,6 @@ CREATE TABLE Registro (
         REFERENCES Sensor (idSensor)
 ) AUTO_INCREMENT = 501;
 
-CREATE TABLE UsuariosEmpresas (
-    idUsuarios INT PRIMARY KEY AUTO_INCREMENT,
-    usuario VARCHAR(30),
-    fkEmpresa INT,
-    FOREIGN KEY (fkEmpresa)
-        REFERENCES Empresa (idEmpresa)
-) AUTO_INCREMENT = 601;
-
 insert into Empresa (nomeEmpresa, representante, cnpj, email, endereco, telefoneEmpresa, senha)
 values 
 ('Johnson', 'Neymar', '13. 222. 333/0001-44.', 'Johnson@neymar.com', 'R. Afonso silva, 138', '2641-2641', '12345667'),
@@ -82,15 +54,6 @@ values
 ('Via4', 'João', '35. 465. 666/0001-17.', 'via4@via4.com', 'Av. Paulista, 987', '2283-9623', 'VIA4SENHA');
 
 SELECT * FROM Empresa;
-
-insert into Motorista (nomeMotorista, telefoneMotorista)
-values 
-('Carlos', '9987-1232'),
-('Douglas', '98012-8822'),
-('Paulo', '99113-4343'),
-('Pedro', '98439-5555');
-
-SELECT * FROM Motorista;
 
 insert into Itinerario (nomeLinha, origem, destino)
 values 
@@ -117,15 +80,6 @@ values
 ('1345', 'assento do fundo 3', 204);
 
 SELECT * FROM Sensor;
-
-insert into InfoOnibus (mediaPassageiros, fkItinerario, fkOnibus)
-values 
-(35, 101, 201),
-(30, 101, 202),
-(14, 102, 203),
-(28, 103, 204);
-
-SELECT * FROM InfoOnibus;
 
 insert into Registro (dataHora, contagem, fkSensor)
 values 
