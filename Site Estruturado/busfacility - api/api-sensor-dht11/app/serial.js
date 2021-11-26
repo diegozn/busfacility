@@ -2,7 +2,6 @@ const sensors = require('./sensors');
 const SerialPort = require('serialport');
 const Readline = SerialPort.parsers.Readline;
 
-
 class ArduinoDataRead {
 
     constructor(){
