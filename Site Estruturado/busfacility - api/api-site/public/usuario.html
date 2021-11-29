@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./style/src/favicon.ico" type="image/x-icon">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="./style/inicial.css">
+    <link rel="stylesheet" href="./style/usuario.css">
     <link rel="shortcut icon" href="./style/src/¡cone favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/37e38224d1.js" crossorigin="anonymous"></script>
 
@@ -45,6 +46,43 @@
         </div>
 
     </nav>
+    <div class="corpo">
+        <div class="sidebar">
+            <div class="user"></div>
+            <button onclick="cadastrarRotas()">Cadastrar Rota</button>
+            <button onclick="trocarUsuario()">Trocar Usuario</button>
+            <button onclick="trocarSenha()">Trocar Senha</button>
+        </div>
+        <div class="conteudo">
+            <div id="pg0" class="inicio">
+                <img src="./style/src/favicon.ico" alt="">
+            </div>
+            <div id="pg1" class="cadastrarrotas">
+                <div class="cabecalho"><h1>Cadastrar nova rota</h1></div>
+                <div class="inputs">
+                    Digite sua nova rota: <input type="text" id="nova_rota"><button onclick="cadastrarRota()">Cadastrar Rota</button>
+                </div>
+            </div>
+            <div id="pg2" class="trocarusuario">
+                    <div class="cabecalho"><h1>Trocar usuario</h1></div>
+                    <div class="inputs">
+                        Digite o nome do usuario atual: <input type="text" id="usuario_atual"><br>
+                        Digite o nome do usuario novo: <input type="text" id="usuario_novo"><br>
+                        <button onclick="atualizarUsuario()">Atualizar Usuario</button>
+                    </div>
+            </div>
+            <div id="pg3" class="trocarsenha">
+                    <div class="cabecalho"><h1>Trocar senha</h1></div>
+                    <div class="inputs">
+                        Digite a senha atual: <input type="text" id="senha_atual"><br>
+                        Digite a nova senha: <input type="text" id="senha_nova"><br>
+                        <button onclick="atualizarSenha()">Atualizar Senha</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/usuario.js"></script>
 </body>
 </html>
