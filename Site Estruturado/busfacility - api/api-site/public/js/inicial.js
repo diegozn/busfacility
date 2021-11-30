@@ -16,7 +16,6 @@ function pesquisar() {
         metro5.style.display = 'none'
 
         // sumindo os demais
-        ale1.style.display = 'none'
         ale2.style.display = 'none'
         ale3.style.display = 'none'
         ale4.style.display = 'none'
@@ -38,7 +37,6 @@ function pesquisar() {
         metro5.style.display = 'block'
 
         // sumindo os demais
-        ale1.style.display = 'none'
         ale2.style.display = 'none'
         ale3.style.display = 'none'
         ale4.style.display = 'none'
@@ -58,7 +56,6 @@ function pesquisar() {
         metro4.style.display = 'block'
         metro5.style.display = 'block'
 
-        ale1.style.display = 'block'
         ale2.style.display = 'block'
         ale3.style.display = 'block'
         ale4.style.display = 'block'
