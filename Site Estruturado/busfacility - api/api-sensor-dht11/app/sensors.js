@@ -5,6 +5,7 @@ function tcrt5000(min, max) {
     let random = Math.random() * (max - min) + min;
   
     return random;
-}
+  }
+  
   module.exports = { tcrt5000 };
   

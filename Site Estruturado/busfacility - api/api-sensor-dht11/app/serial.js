@@ -5,13 +5,13 @@ const Readline = SerialPort.parsers.Readline;
 class ArduinoDataRead {
 
     constructor(){
-        this.listData = [];
+        // this.listData = [];
 		this.__listDataTemp = [];
     }
 
-    get List() {
-        return this.listData;
-    }
+    // get List() {
+    //     return this.listData;
+    // }
     get ListTemp() {
         return this.__listDataTemp;
     }
@@ -26,9 +26,10 @@ class ArduinoDataRead {
                     this.__listDataTemp.pop();
                 }
             }
-            console.log('temp: ', parseFloat(data_float[1].toFixed(2)), 'hum: ', data_float[0]);
+            // 'temp: ', parseFloat(data_float[1].toFixed(2)), 
+            console.log('hum: ', data_float[0]);
             this.__listDataTemp.push(data_float[1]);
-            this.listData.push(data_float[0]);
+            // this.listData.push(data_float[0]);
 
         }, 2000);
     }
@@ -42,7 +43,7 @@ class ArduinoDataRead {
             if (listArduinoSerial.length != 1) {
                 this.fake_data();
                 throw new Error("Arduino not found - Generating data")
-            }else{
+            } else {
                 console.log("Arduino found in the com %s", listArduinoSerial[0].comName);
                 return listArduinoSerial[0].comName;
             }
@@ -55,11 +56,14 @@ class ArduinoDataRead {
             
             parser.on('data', (data) => {
 				let value = data.toString().split(';');
-				let temperature = parseFloat(value[1].replace('\r', ''));
+				// let temperature = parseFloat(value[1].replace('\r', ''));
 				let humidity = parseFloat(value[0].replace('\r', ''));
+
                 this.listData.push(humidity);
-                this.__listDataTemp.push(temperature)
-                console.log("Temp: ",temperature," Umidade: ",humidity);
+                // this.__listDataTemp.push(temperature)
+
+                // "Temp: ",temperature,
+                console.log(" Umidade: ",humidity);
             });
             
         }).catch(error => console.log(error));
@@ -69,4 +73,5 @@ class ArduinoDataRead {
 const serial = new ArduinoDataRead();
 serial.SetConnection();
 
-module.exports.ArduinoData = {List: serial.List, ListTemp: serial.ListTemp} 
+// List: serial.List,
+module.exports.ArduinoData = { ListTemp: serial.ListTemp} 
