@@ -5,7 +5,7 @@ function cadastrarRotas(){
     pg2.style.display = `none`;
     pg3.style.display = `none`;
 
-
+// teste
 }
 
 function trocarUsuario(){
