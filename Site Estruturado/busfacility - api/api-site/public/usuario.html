@@ -52,6 +52,7 @@
             <button onclick="cadastrarRotas()">Cadastrar Rota</button>
             <button onclick="trocarUsuario()">Trocar Usuario</button>
             <button onclick="trocarSenha()">Trocar Senha</button>
+            <button onclick="adicionarColaborador()">Adiconar Colaborador</button>
         </div>
         <div class="conteudo">
             <div id="pg0" class="inicio">
@@ -79,6 +80,15 @@
                         <button onclick="atualizarSenha()">Atualizar Senha</button>
                     </div>
             </div>
+            <div id="pg4" class="adicionarcolaborador">
+                <div class="cabecalho"><h1>Adicionar Colaborador</h1></div>
+                <div class="inputs">
+                    Digite o nome do colaborador: <input type="text" id="nome_colab"><br>
+                    Digite a senha do colaborador: <input type="text" id="senha_colab"><br>
+                    Digite o nivel de permissão: <input type="text" id="permissao_colab"><br>
+                    <button onclick="addColaborador()">Adiconar</button>
+                </div>
+        </div>
         </div>
     </div>
 

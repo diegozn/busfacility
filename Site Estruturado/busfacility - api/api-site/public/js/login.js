@@ -40,7 +40,7 @@ function entrarlogin() {
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
 
-                window.location = "../dashboard.html";
+                window.location = "../usuario.html";
 
 
             });
@@ -59,18 +59,6 @@ function entrarlogin() {
     })
 
     return false;
-}
-
-var login;
-var senha;
-var acesso = false;
-
-function entrarLogin(){
-    
-    if(acesso == true){
-        window.location.href = '../dashboard.html'
-    }
-
 }
 
 function mostrarSenha(){

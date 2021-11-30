@@ -18,7 +18,7 @@ class ArduinoDataRead {
 	
     fake_data(){
         setInterval(() => {
-            let data_float = sensors.dht11({minHum:50, maxHum:100});
+            let data_float = sensors.tcrt5000({minHum:50, maxHum:100});
 
             if (this.__listDataTemp.length === 59) {
                 let sum = this.__listDataTemp.reduce((a, b) =>  a + b, 0);

@@ -1,8 +1,70 @@
-
 var key_email = false;
 var key_senha1 = false;
 var key_senha2 = false;
 var dica_ativa = false;
+
+function cadastrar() {
+
+    var nomeVar = input_social.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_senha_1.value;
+    var confirmacaoSenhaVar = input_senha_2.value;
+
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+
+        window.alert("Preencha todos os campos para prosseguir!");
+        if (nomeVar == "") {
+            console.log('nome está em branco')
+        }
+        if (emailVar == "") {
+            console.log('email está em branco')
+        }
+        if (senhaVar == "") {
+            console.log('senha está em branco')
+        }
+        if (confirmacaoSenhaVar == "") {
+            console.log('confirmacaoSenha está em branco')
+        }
+        return false;
+    }
+
+    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+        window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+        return false;
+    }
+
+    if (senhaVar != confirmacaoSenhaVar) {
+        window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+        return false;
+    }
+
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Cadastro realizado com sucesso!");
+            window.location = "login.html";
+            limparFormulario();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
+}
 
 function enviarCadastro(){
     
@@ -13,8 +75,6 @@ function enviarCadastro(){
     }
 
 }
-
-
 
 function mostrarSenha(){
 

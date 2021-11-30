@@ -9,15 +9,25 @@ CREATE TABLE Empresa (
     email VARCHAR(100),
     endereco VARCHAR(100),
     telefoneEmpresa VARCHAR(20),
-    senha VARCHAR(10)
+    senha VARCHAR(45),
+    permissao int
 )  AUTO_INCREMENT = 1;
 
-CREATE TABLE Itinerario (
-    idItinerario INT PRIMARY KEY AUTO_INCREMENT,
-    nomeLinha VARCHAR(30),
-    origem VARCHAR(30),
-    destino VARCHAR(30)
-) AUTO_INCREMENT = 101;
+CREATE TABLE usuario (
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    nomeUsuario VARCHAR(50),
+    senha VARCHAR(45),
+    permissao int
+)  AUTO_INCREMENT = 2000;
+
+select * from empresa;
+select * from usuario;
+
+INSERT INTO usuario (nomeUsuario, senha, permissao)
+VALUES
+('teste');
+
+
 
 CREATE TABLE Onibus (
     idOnibus INT PRIMARY KEY AUTO_INCREMENT,
