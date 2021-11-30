@@ -63,12 +63,12 @@ values
 
 SELECT * FROM Itinerario;
 
-insert into Onibus (chassi, placa, fkEmpresa, fkMotorista)
+insert into Onibus (chassi, placa, fkEmpresa)
 values 
-('9B2N3D34F', 'DER-1324', 1, 11),
-('A2D3D4G4', 'BTE-9090', 2, 12),
-('S2F3G5H6', 'SEF-1242', 3, 13),
-('G6H4J8K5', 'ZDF-1528', 4, 14);
+('9B2N3D34F', 'DER-1324', 1),
+('A2D3D4G4', 'BTE-9090', 2),
+('S2F3G5H6', 'SEF-1242', 3),
+('G6H4J8K5', 'ZDF-1528', 4);
 
 SELECT * FROM Onibus;
 

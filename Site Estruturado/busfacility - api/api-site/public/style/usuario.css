@@ -53,6 +53,28 @@ html{
     height: 150px;
     opacity: 0.2;
 }
+.conteudo .cadastrarcolaborador{
+
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+
+}
+.cadastrarcolaborador .cabecalho{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+}
+.cadastrarcolaborador .inputs{
+    width: 100%;
+    height: 85%;
+    padding-left: 100px;
+}
 .conteudo .cadastrarrotas {
 
     height: 100%;
