@@ -5,12 +5,12 @@ const db = require('./connection');
 
 router.get('/temperature', (request, response, next) => {
 
-    let sum = ArduinoData.ListTemp.reduce((a, b) => a + b, 0);
-    let average = (sum / ArduinoData.ListTemp.length).toFixed(2);
+    let sum = ArduinoData.ListSaiu.reduce((a, b) => a + b, 0);
+    let average = (sum / ArduinoData.ListSaiu.length).toFixed(2);
 
     response.json({
-        data: ArduinoData.ListTemp,
-        total: ArduinoData.ListTemp.length,
+        data: ArduinoData.ListSaiu,
+        total: ArduinoData.ListSaiu.length,
         average: isNaN(average) ? 0 : average,
     });
 
@@ -19,12 +19,12 @@ router.get('/temperature', (request, response, next) => {
 
 router.get('/humidity', (request, response, next) => {
 
-    let sum = ArduinoData.List.reduce((a, b) => a + b, 0);
-    let average = (sum / ArduinoData.List.length).toFixed(2);
+    let sum = ArduinoData.ListEntrou.reduce((a, b) => a + b, 0);
+    let average = (sum / ArduinoData.ListEntrou.length).toFixed(2);
 
     response.json({
-        data: ArduinoData.List,
-        total: ArduinoData.List.length,
+        data: ArduinoData.ListEntrou,
+        total: ArduinoData.ListEntrou.length,
         average: isNaN(average) ? 0 : average,
     });
 
@@ -32,8 +32,8 @@ router.get('/humidity', (request, response, next) => {
 
 
 router.post('/sendData', (request, response) => {
-    entrada = ArduinoData.ListTemp[ArduinoData.ListTemp.length - 1];
-    saida = ArduinoData.List[ArduinoData.List.length - 1];
+    entrada = ArduinoData.ListSaiu[ArduinoData.ListSaiu.length - 1];
+    saida = ArduinoData.ListEntrou[ArduinoData.ListEntrou.length - 1];
 
     let data_agora = new Date()
 
