@@ -10,7 +10,6 @@ CREATE TABLE Empresa (
     endereco VARCHAR(100),
     telefoneEmpresa VARCHAR(20),
     senha VARCHAR(45),
-
     permissaoEmpresa int
 );
 
