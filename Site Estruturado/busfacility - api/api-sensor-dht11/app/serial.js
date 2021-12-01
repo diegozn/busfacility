@@ -5,13 +5,13 @@ const Readline = SerialPort.parsers.Readline;
 class ArduinoDataRead {
 
     constructor(){
-        // this.listData = [];
+        this.listData = [];
 		this.__listDataTemp = [];
     }
 
-    // get List() {
-    //     return this.listData;
-    // }
+    get List() {
+        return this.listData;
+    }
     get ListTemp() {
         return this.__listDataTemp;
     }
@@ -28,8 +28,8 @@ class ArduinoDataRead {
             }
              
             console.log('Entrou: ', parseFloat(data_float[0].toFixed(0)), 'Saiu:', parseFloat(data_float[1].toFixed(0)));
-            this.__listDataTemp.push(data_float);
-            // this.listData.push(data_float[0]);
+            this.__listDataTemp.push(data_float[0]);
+            this.listData.push(data_float[0]);
 
         }, 2000);
     }
@@ -74,4 +74,4 @@ const serial = new ArduinoDataRead();
 serial.SetConnection();
 
 // List: serial.List,
-module.exports.ArduinoData = { ListTemp: serial.ListTemp} 
+module.exports.ArduinoData = { List: serial.List, ListTemp: serial.ListTemp} 
