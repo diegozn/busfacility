@@ -10,18 +10,13 @@ CREATE TABLE Empresa (
     endereco VARCHAR(100),
     telefoneEmpresa VARCHAR(20),
     senha VARCHAR(45),
-<<<<<<< HEAD
+
     permissaoEmpresa int
 );
-=======
-    permissao int
-)  AUTO_INCREMENT = 1;
->>>>>>> banco
 
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nomeUsuario VARCHAR(50),
-<<<<<<< HEAD
     senhaUsuario VARCHAR(45),
     permissaoUsuario int,
     fkEmpresa int,
@@ -35,8 +30,6 @@ placa varchar(10),
 fkEmpresa int,
 foreign key (fkEmpresa) references empresa(idEmpresa)
 );
-
-
 
 create table sensor (
 idSensor int primary key auto_increment,
@@ -60,10 +53,6 @@ foreign key (fkSensor) references sensor(idSensor)
 -- ('2021-09-05 23:09:03', 19, 302),
 -- ('2021-09-06 21:15:23', 14, 303),
 -- ('2021-09-24 14:35:24', 28, 304);
-=======
-    senha VARCHAR(45),
-    permissao int
-)  AUTO_INCREMENT = 2000;
 
 select * from empresa;
 select * from usuario;
@@ -71,8 +60,6 @@ select * from usuario;
 INSERT INTO usuario (nomeUsuario, senha, permissao)
 VALUES
 ('teste');
-
-
 
 CREATE TABLE Onibus (
     idOnibus INT PRIMARY KEY AUTO_INCREMENT,
@@ -99,8 +86,7 @@ CREATE TABLE Registro (
     fkSensor INT,
     FOREIGN KEY (fkSensor)
         REFERENCES Sensor (idSensor)
-) AUTO_INCREMENT = 501;
->>>>>>> banco
+) AUTO_INCREMENT = 501;6
 
 insert into Empresa (nomeEmpresa, representante, cnpj, email, endereco, telefoneEmpresa, senha)
 values 
