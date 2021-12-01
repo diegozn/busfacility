@@ -5,31 +5,31 @@ const Readline = SerialPort.parsers.Readline;
 class ArduinoDataRead {
 
     constructor(){
-        this.listData = [];
-		this.__listDataTemp = [];
+        this.listDataEntrou = [];
+		this.listDataSaiu = [];
     }
 
-    get List() {
-        return this.listData;
+    get ListEntrou() {
+        return this.listDataEntrou;
     }
-    get ListTemp() {
-        return this.__listDataTemp;
+    get ListSaiu() {
+        return this.listDataSaiu;
     }
 	
     fake_data(){
         setInterval(() => {
-            let data_float = sensors.tcrt5000({minHum:50, max:100});
+            let data_float = sensors.tcrt5000({minHum:1, max:20});
 
-            if (this.__listDataTemp.length === 59) {
-                let sum = this.__listDataTemp.reduce((a, b) =>  a + b, 0);
-                while(this.__listDataTemp.length > 0) {
-                    this.__listDataTemp.pop();
+            if (this.listDataSaiu.length === 59) {
+                let sum = this.listDataSaiu.reduce((a, b) =>  a + b, 0);
+                while(this.listDataSaiu.length > 0) {
+                    this.listDataSaiu.pop();
                 }
             }
              
             console.log('Entrou: ', parseFloat(data_float[0].toFixed(0)), 'Saiu:', parseFloat(data_float[1].toFixed(0)));
-            this.__listDataTemp.push(data_float[1]);
-            this.listData.push(data_float[0]);
+            this.listDataSaiu.push(data_float[1]);
+            this.listDataEntrou.push(data_float[0]);
 
         }, 2000);
     }
@@ -63,7 +63,12 @@ class ArduinoDataRead {
                 // this.__listDataTemp.push(temperature)
 
                 // "Temp: ",temperature,
-                console.log(" Umidade: ",humidity);
+                
+                if (humidity == 1) {
+                    console.log(" Entrada: ", humidity);
+                } else {
+                    console.log(" Saida: ", humidity - 1);
+                }
             });
             
         }).catch(error => console.log(error));
@@ -74,4 +79,5 @@ const serial = new ArduinoDataRead();
 serial.SetConnection();
 
 // List: serial.List,
-module.exports.ArduinoData = { List: serial.List, ListTemp: serial.ListTemp} 
+module.exports.ArduinoData = { ListEntrou: serial.ListEntrou, 
+                               ListSaiu: serial.ListSaiu} 
