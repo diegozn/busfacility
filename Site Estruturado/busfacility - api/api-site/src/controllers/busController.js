@@ -3,7 +3,7 @@ var busModel = require("../models/busModel");
 function obterPassageiros(req, res) {
 
     var user = req.params.user;
-
+    console.log('opa')
     busModel.obterPassageiros(user).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);

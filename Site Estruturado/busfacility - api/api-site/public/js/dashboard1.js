@@ -1,3 +1,26 @@
+function obterPassageiros(user) {
+
+    fetch(`/bus/obterpassageiros/${user}`, { cache: 'no-store' }).then(function (response) {
+        
+        if (response.ok) {
+            
+            response.json().then(function (resposta) {
+                
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                //localStorage.setItem()
+                
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+}
+
+
 // variaveis globais
 
 var myChart1;
@@ -12,6 +35,7 @@ function main(){ //
 
     setData()
     mostraGrafico()
+    obterPassageiros()
 
 }
 
@@ -310,28 +334,3 @@ function recarregar(){ // Executa ao recarregar a página
     usuario.innerHTML = `${user}!`
 
 }
-
-function obterPassageiros(user) {
-
-    fetch(`/bus/obterpassageiros/${user}`, { cache: 'no-store' }).then(function (response) {
-        
-        if (response.ok) {
-            
-            response.json().then(function (resposta) {
-                
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                resposta.reverse();
-                //localStorage.setItem()
-                
-            });
-        } else {
-            console.error('Nenhum dado encontrado ou erro na API');
-        }
-    })
-        .catch(function (error) {
-            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
-}
-
-
-

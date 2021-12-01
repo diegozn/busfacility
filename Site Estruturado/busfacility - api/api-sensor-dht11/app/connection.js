@@ -4,14 +4,14 @@ var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     // password : 'bandtec',
-    // database : 'Busfacility',
+    database : 'Busfacility',
     password : 'Lu220501@',
-    database : 'acquatec'
+    // database : 'acquatec'
 });
 
 connection.connect(function(err) {
     if (err) throw err;
-    console.log('Conectado ao BD com sucesso!')
+    console.log('Conectado ao BD com sucesso!')     
 });
 
 

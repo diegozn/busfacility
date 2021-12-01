@@ -111,17 +111,17 @@ function mostrarSenha_2(){
 }
     
 
-function cadastrar(){
+// function cadastrar(){
     
-    localStorage.setItem('cnpj',input_cnpj.value);
-    localStorage.setItem('social',input_social.value);
-    localStorage.setItem('email',input_email.value);
-    localStorage.setItem('telefone',input_telefone.value);
-    localStorage.setItem('senha',input_senha_1.value);
-    alert('Cadastro concluído com sucesso!')
-    window.location.href = '../html/loginV1.1.html'
+//     localStorage.setItem('cnpj',input_cnpj.value);
+//     localStorage.setItem('social',input_social.value);
+//     localStorage.setItem('email',input_email.value);
+//     localStorage.setItem('telefone',input_telefone.value);
+//     localStorage.setItem('senha',input_senha_1.value);
+//     alert('Cadastro concluído com sucesso!')
+//     window.location.href = '../html/loginV1.1.html'
     
-}
+// }
 
 function alerta(self){
 

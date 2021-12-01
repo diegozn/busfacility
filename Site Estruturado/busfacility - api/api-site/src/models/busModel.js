@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
 function obterPassageiros(user) {
-    instrucaoSql = `SELECT COUNT(ENTRADA), COUNT(SAIDA) FROM MEDIDA WHERE ID = ${user}`;
+    instrucaoSql = `SELECT Entrada, Saida FROM MEDIDA WHERE fk_aquario = 1;`;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
