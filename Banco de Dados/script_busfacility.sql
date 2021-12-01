@@ -10,12 +10,18 @@ CREATE TABLE Empresa (
     endereco VARCHAR(100),
     telefoneEmpresa VARCHAR(20),
     senha VARCHAR(45),
+<<<<<<< HEAD
     permissaoEmpresa int
 );
+=======
+    permissao int
+)  AUTO_INCREMENT = 1;
+>>>>>>> banco
 
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nomeUsuario VARCHAR(50),
+<<<<<<< HEAD
     senhaUsuario VARCHAR(45),
     permissaoUsuario int,
     fkEmpresa int,
@@ -54,6 +60,47 @@ foreign key (fkSensor) references sensor(idSensor)
 -- ('2021-09-05 23:09:03', 19, 302),
 -- ('2021-09-06 21:15:23', 14, 303),
 -- ('2021-09-24 14:35:24', 28, 304);
+=======
+    senha VARCHAR(45),
+    permissao int
+)  AUTO_INCREMENT = 2000;
+
+select * from empresa;
+select * from usuario;
+
+INSERT INTO usuario (nomeUsuario, senha, permissao)
+VALUES
+('teste');
+
+
+
+CREATE TABLE Onibus (
+    idOnibus INT PRIMARY KEY AUTO_INCREMENT,
+    chassi VARCHAR(30),
+    placa VARCHAR(10),
+    fkEmpresa INT,
+    FOREIGN KEY (fkEmpresa)
+        REFERENCES Empresa (idEmpresa)
+) AUTO_INCREMENT = 201;
+
+CREATE TABLE Sensor (
+    idSensor INT PRIMARY KEY AUTO_INCREMENT,
+    n_Serie VARCHAR(30),
+    posicao VARCHAR(30),
+    fkOnibus INT,
+    FOREIGN KEY (fkOnibus)
+        REFERENCES Onibus (idOnibus)
+) AUTO_INCREMENT = 301;
+
+CREATE TABLE Registro (
+    idRegistro INT PRIMARY KEY AUTO_INCREMENT,
+    dataHora DATETIME DEFAULT CURRENT_TIMESTAMP,
+    contagem INT,
+    fkSensor INT,
+    FOREIGN KEY (fkSensor)
+        REFERENCES Sensor (idSensor)
+) AUTO_INCREMENT = 501;
+>>>>>>> banco
 
 insert into Empresa (nomeEmpresa, representante, cnpj, email, endereco, telefoneEmpresa, senha)
 values 

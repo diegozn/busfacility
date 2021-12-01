@@ -3,9 +3,16 @@ var router = express.Router();
 
 var busController = require("../controllers/busController");
 
+<<<<<<< HEAD
 router.get("/obterassageiros/:user", function (req, res) {
     busController.obterPassageiros(req, res);
 });
 
 
+=======
+router.post("/addColaborador", function (req, res) {
+    busController.addColaborador(req, res);
+});
+
+>>>>>>> banco
 module.exports = router;

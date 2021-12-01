@@ -101,6 +101,15 @@ html{
 
 
 }
+
+.conteudo .adicionarcolaborador {
+
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+
+}
 .cadastrarrotas .cabecalho {
     width: 100%;
     height: 15%;
@@ -148,6 +157,25 @@ html{
     padding-left: 100px;
 
 }
+
+.adicionarcolaborador .cabecalho {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.adicionarcolaborador .inputs {
+
+    
+    width: 100%;
+    height: 85%;
+    padding-left: 100px;
+
+}
+
 .inputs input{
 
     width: 200px;

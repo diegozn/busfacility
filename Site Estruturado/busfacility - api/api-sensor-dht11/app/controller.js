@@ -16,6 +16,7 @@ router.get('/temperature', (request, response, next) => {
 
 });
 
+
 router.get('/humidity', (request, response, next) => {
 
     let sum = ArduinoData.List.reduce((a, b) => a + b, 0);
@@ -29,15 +30,18 @@ router.get('/humidity', (request, response, next) => {
 
 });
 
+
 router.post('/sendData', (request, response) => {
     temperatura = ArduinoData.ListTemp[ArduinoData.ListTemp.length - 1];
+    console.log('Alguma coisa')
     umidade = ArduinoData.List[ArduinoData.List.length - 1];
 
     let data_agora = new Date()
 
-    var sql = "INSERT INTO medida(temperatura, umidade, momento, fk_aquario) VALUES(?)";
-    values = [temperatura, umidade, data_agora, 1];
+    var sql = "INSERT INTO medida(temperatura, momento, fk_aquario) VALUES(?)";
+    values = [temperatura, data_agora, 1];
     db.query(sql, [values], function(err, result){
+        console.log('Chegou Aqui')
         if(err) throw err;
         console.log("Medidas inseridas: " + result.affectedRows)
     });
