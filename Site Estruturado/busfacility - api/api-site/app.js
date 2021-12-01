@@ -12,7 +12,6 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
 var medidasRouter = require("./src/routes/medidas");
-var busRouter = require("./src/routes/medidas");
 var busRouter = require("./src/routes/bus");
 
 app.use(express.json());

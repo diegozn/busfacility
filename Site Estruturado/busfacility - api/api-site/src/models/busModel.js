@@ -1,13 +1,9 @@
 var database = require("../database/config");
 
 function obterPassageiros(user) {
-    instrucaoSql = ``;
+    instrucaoSql = `SELECT COUNT(ENTRADA), COUNT(SAIDA) FROM MEDIDA WHERE ID = ${user}`;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
-}
-
-module.exports = {
-    obterPassageiros
 }
 
 var database = require("../database/config")
@@ -33,5 +29,6 @@ function entrar(email, senha) {
 
 module.exports = {
     entrar,
-    addColaborador
+    addColaborador,
+    obterPassageiros
 };

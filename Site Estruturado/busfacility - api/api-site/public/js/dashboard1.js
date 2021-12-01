@@ -319,9 +319,9 @@ function obterPassageiros(user) {
             
             response.json().then(function (resposta) {
                 
-                //console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
-                localStorage.setItem('passageiros',resposta[0].quantidade)
+                //localStorage.setItem()
                 
             });
         } else {

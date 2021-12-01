@@ -18,12 +18,6 @@ function obterPassageiros(req, res) {
 }
 
 
-
-module.exports = {
-    obterPassageiro,
-
-}
-
 var sessoes = [];
 
 function addColaborador(req, res) {
@@ -55,5 +49,6 @@ function addColaborador(req, res) {
 }
 
 module.exports = {
+    obterPassageiros,
     addColaborador
 }
