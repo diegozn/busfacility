@@ -14,7 +14,6 @@
 		}
 	</style> -->
 </head>
-
 <body>
 	<div>
 		<section>
@@ -32,9 +31,10 @@
 		</section>
 		<section style="width:50%">
 			<canvas id="chart-humidity"></canvas>
-			<section>
+		</section>
 	</div>
 	<script>
+		
 		var context = document.getElementById("chart").getContext("2d");
 		context.canvas.width = 1000;
 		context.canvas.height = 300;
@@ -160,7 +160,7 @@
 		//hora de montar/atualizar o gráfico
 		this.lastIndexTempHumidity = 0;
 		this.timeHumidity = 0;
-
+/*
 		function get_dataHumidity() {
 
 			var http = new XMLHttpRequest();
@@ -192,7 +192,7 @@
 		}
 
 		get_dataHumidity();
-
+*/
 
 		function sendData() {
 			var http = new XMLHttpRequest();
@@ -200,11 +200,7 @@
 			http.send(null);
 		}
 
-		setInterval(() => {
-			get_data();
-			get_dataHumidity();
-			sendData();
-		}, 2000);
+		
 
 	</script>
 </body>
