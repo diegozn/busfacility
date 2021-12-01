@@ -1,13 +1,13 @@
-function cadastrarColaborador(){
+// function cadastrarColaborador(){
 
-    pg0.style.display = `none`;
-    pg1.style.display = `flex`;
-    pg2.style.display = `none`;
-    pg3.style.display = `none`;
-    pg4.style.display = `none`;
+//     pg0.style.display = `none`;
+//     pg1.style.display = `flex`;
+//     pg2.style.display = `none`;
+//     pg3.style.display = `none`;
+//     pg4.style.display = `none`;
 
 
-}
+// }
 
 function cadastrarRotas(){
 
@@ -16,6 +16,7 @@ function cadastrarRotas(){
     pg2.style.display = `flex`;
     pg3.style.display = `none`;
     pg4.style.display = `none`;
+    pg5.style.display = `none`;
 
 }
 
@@ -26,7 +27,7 @@ function trocarUsuario(){
     pg2.style.display = `none`;
     pg3.style.display = `flex`;
     pg4.style.display = `none`;
-
+    pg5.style.display = `none`;
 }
 
 function trocarSenha(){
@@ -36,8 +37,7 @@ function trocarSenha(){
     pg2.style.display = `none`;
     pg3.style.display = `none`;
     pg4.style.display = `flex`;
-    pg3.style.display = `flex`;
-    pg4.style.display = `none`;
+    pg5.style.display = `none`;
 
 
 }
@@ -48,8 +48,8 @@ function adicionarColaborador(){
     pg1.style.display = `none`;
     pg2.style.display = `none`;
     pg3.style.display = `none`;
-    pg4.style.display = `flex`;
-
+    pg4.style.display = `none`;
+    pg5.style.display = `flex`;
 
 }
 
