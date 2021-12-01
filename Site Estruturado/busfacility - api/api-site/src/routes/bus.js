@@ -8,4 +8,8 @@ router.get("/obterassageiros/:user", function (req, res) {
 });
 
 
+router.post("/addColaborador", function (req, res) {
+    busController.addColaborador(req, res);
+});
+
 module.exports = router;

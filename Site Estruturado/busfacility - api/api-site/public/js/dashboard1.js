@@ -17,7 +17,6 @@ function main(){ //
 
 function mostraGrafico(){ // Troca os tipos de graficos
     
-    
     if(semana_atual == undefined || semana_atual == "x"){
         console.log(semana_atual)
         canva3.style.display = 'none';

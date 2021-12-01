@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html>
+
 <head>
 	<title>Line Chart</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -14,13 +15,18 @@
 		}
 	</style>
 </head>
+
 <body>
-	<section>
-		<h2>Média: <label id='average'>0.00</label></h2>
-	</section>
-	<section style="width:100%">
-		<canvas id="chart"></canvas>
-	<section>
+	<div>
+		<h1>Sensor LM35 - Temperatura</h1>
+			<section>
+				<h2>Média: <label id='average'>0.00</label></h2>
+			</section>
+			<section style="width:100%">
+				<canvas id="chart"></canvas>
+		<section>
+	</div>
+	
 	<script>
 
 		var context = document.getElementById("chart").getContext("2d");
@@ -31,14 +37,15 @@
 			type: 'line',
 			data: {
 				datasets: [{
-					label: "Humidity x Time",
+					label: "Temperatura",
 					type: 'line',
+					borderColor: ['#ff3232'],
+					backgroundColor: ['#ff7f7f']
 				}]
 			},
 			options: {
 				scales: {
 					xAxes: [{
-						//type: 'value',
 						distribution: 'series',
                         ticks: {
                             beginAtZero:true
@@ -47,7 +54,7 @@
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Humidity'
+							labelString: 'Temperatura'
                         },
                         ticks: {
                             beginAtZero:true
@@ -73,11 +80,10 @@
         function get_data(){
 
             var http = new XMLHttpRequest();
-            http.open('GET', 'http://localhost:3000/api/humidity', false);
+            http.open('GET', 'http://localhost:3000/api', false);
             http.send(null);        
 			
             var obj = JSON.parse(http.responseText);
-
             if (obj.data.length == 0){
                 return;
             }
@@ -98,15 +104,23 @@
                 chart.update();
 			});
 			
-			document.getElementById('average').textContent = obj.average
+			document.getElementById('average').textContent = obj.average;
 		} 
-		
-		get_data();
+
+
+		function sendData(){
+			var http = new XMLHttpRequest();
+			http.open('POST','http://localhost:3000/api/sendData', false);
+			//open(metodo,url[,async[,user[,password]]])
+			http.send(null);
+		}
 
         setInterval(() => {
-            get_data();
-        }, 1000);
+			get_data();
+			sendData();
+        }, 2000);
 
 	</script>
 </body>
+
 </html>

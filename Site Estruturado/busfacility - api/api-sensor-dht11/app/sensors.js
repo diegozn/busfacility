@@ -1,46 +1,37 @@
-function lm35(min, max) {
-    min = typeof min == "undefined" ? 18 : min;
-    max = typeof max == "undefined" ? 25 : max;
+function tcrt5000(options) {
+    minEntrada = options.minEnter;
+    maxEntrada = options.maxEnter;
   
-    let random = Math.random() * (max - min) + min;
+    minSaida = options.minExit;
+    maxSaida = options.maxExit;
   
-    return random;
-  }
-  
-function dht11(options) {
-    minHumidity = options.minHum;
-    maxHumidity = options.maxHum;
-  
-    minTemperature = options.minTemp;
-    maxTemperature = options.maxTemp;
-  
-    if (minHumidity < 20 || maxHumidity > 100) {
+    if (minEntrada < 5 || maxEntrada > 12) {
       throw new Error(
         "Os valores minímos e máximos para umidade são 20% e 100% respectivamente."
       );
     }
-  
-    if (minTemperature < 0 || maxTemperature > 50) {
+
+    if (minSaida < 0 || maxSaida > 11) {
       throw new Error(
         "Os valores minímos e máximos para temperatura são 0 e 50 respectivamente."
       );
     }
   
-    minTemperature = typeof minTemperature == "undefined" ? 18 : minTemperature;
-    maxTemperature = typeof maxTemperature == "undefined" ? 25 : maxTemperature;
+    minEntrada = typeof minEntrada == "undefined" ? 5 : minEntrada;
+    maxEntrada = typeof maxEntrada == "undefined" ? 12 : maxEntrada;
   
-    minHumidity = typeof minHumidity == "undefined" ? 20 : minHumidity;
-    maxHumidity = typeof maxHumidity == "undefined" ? 80 : maxHumidity;
+    minSaida = typeof minSaida == "undefined" ? 0 : minSaida;
+    maxSaida = typeof maxSaida == "undefined" ? 11 : maxSaida;
   
-    let randomHumidity = Math.floor(
-      Math.random() * (maxHumidity - minHumidity + 1) + minHumidity
+    let randomEntrada = Math.floor(
+      Math.random() * (maxEntrada - minSaida + 1) + minSaida
     );
   
-    let randomTemperature =
-      Math.random() * (maxTemperature - minTemperature) + minTemperature;
+    let randomSaida =
+      Math.random() * (maxEntrada - minEntrada) + minSaida;
   
-    return [randomHumidity, randomTemperature];
+    return [randomEntrada, randomSaida];
   }
   
-  module.exports = { lm35, dht11 };
+  module.exports = { tcrt5000 };
   
