@@ -312,5 +312,27 @@ function recarregar(){ // Executa ao recarregar a página
 
 }
 
+function obterPassageiros(user) {
+
+    fetch(`/bus/obterpassageiros/${user}`, { cache: 'no-store' }).then(function (response) {
+        
+        if (response.ok) {
+            
+            response.json().then(function (resposta) {
+                
+                //console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                localStorage.setItem('passageiros',resposta[0].quantidade)
+                
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+}
+
 
 
