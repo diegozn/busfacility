@@ -1,6 +1,5 @@
 var busModel = require("../models/busModel");
 
-<<<<<<< HEAD
 function obterPassageiros(req, res) {
 
     var user = req.params.user;
@@ -21,9 +20,10 @@ function obterPassageiros(req, res) {
 
 
 module.exports = {
-    obterPassageiros
+    obterPassageiro,
 
-=======
+}
+
 var sessoes = [];
 
 function addColaborador(req, res) {
@@ -56,5 +56,4 @@ function addColaborador(req, res) {
 
 module.exports = {
     addColaborador
->>>>>>> banco
 }

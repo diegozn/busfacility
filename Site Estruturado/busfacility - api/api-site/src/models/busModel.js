@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var database = require("../database/config");
 
 function obterPassageiros(user) {
@@ -10,7 +9,7 @@ function obterPassageiros(user) {
 module.exports = {
     obterPassageiros
 }
-=======
+
 var database = require("../database/config")
 
 function addColaborador(nome, senha, permissao) {
@@ -36,4 +35,3 @@ module.exports = {
     entrar,
     addColaborador
 };
->>>>>>> banco
