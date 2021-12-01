@@ -1,45 +1,95 @@
 html{
-    overflow: hidden;
-}
+    overflow-x: hidden;
 
+}
+/* #FFF8E5 cor aqui */
 #header, #header2{
     margin-bottom: 0;
 }
 .corpo {
-    height: 100%;
-    width: 100%;
-    background-color: darkolivegreen;
+    margin-top: 2%;
+    height: 80%;
+    width: 98%;
+    
+    /* background-color: darkolivegreen; */
     display: flex;
 }
 
 .sidebar {
     height: 100%;
     width: 30%;
-    background-color: grey;
+    margin-right: 1%;
+    margin-left: 1%;
+    background-color: #FFF8E5;
+    border: 1px solid black;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.37);
+		-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.37);
+		box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.37);
 }
 .sidebar .user {
+    
 
-    width: 100%;
+    width: 90%;
     height: 100px;
-    background-color: aliceblue;
-
+    background-color: rgba(255, 166, 0, 0.83);
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 8%;
+    border-radius: 15px;
+    
+    
 }
 .sidebar button {
-
-    width: 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
     height: 50px;
     background-color: transparent;
-    border: 2px 2px 2px black;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px 2px 2px silver;
     font-size: 20px;
-
+    transition: 0.6s;
+    
 }
+
+.sidebar button:hover {
+    background-color: rgba(255, 166, 0, 0.508);
+  
+    transform: scale(1.05);
+}
+
+#footer2{
+
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #383838ab;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    bottom: 0;
+    height: 4.6%;
+    margin-top: 2%;
+    
+    
+}
+
+
 .conteudo {
     height: 100%;
     width: 100%;
-    background-color: lightgray;
-    display: flex;
+    border: 1px solid black;
+    background-color: #FFF8E5;
+    border-radius: 15px;
+    margin-bottom: 10%;
+         -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.37);
+		-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.37);
+		box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.37);
+        display: flex;
 }
 .conteudo .inicio {
     height: 100%;
@@ -59,10 +109,9 @@ html{
     width: 100%;
     display: none;
     flex-direction: column;
-
 }
-.cadastrarcolaborador .cabecalho{
 
+.cadastrarcolaborador .cabecalho{
     width: 100%;
     height: 15%;
     display: flex;
@@ -70,11 +119,13 @@ html{
     align-items: center;
     padding-left: 100px;
 }
+
 .cadastrarcolaborador .inputs{
     width: 100%;
     height: 85%;
     padding-left: 100px;
 }
+
 .conteudo .cadastrarrotas {
 
     height: 100%;
@@ -82,7 +133,6 @@ html{
     display: none;
     flex-direction: column;
     
-
 }
 .conteudo .trocarusuario {
 
@@ -98,8 +148,6 @@ html{
     width: 100%;
     display: none;
     flex-direction: column;
-
-
 }
 .cadastrarrotas .cabecalho {
     width: 100%;
@@ -142,14 +190,46 @@ html{
 }
 .trocarsenha .inputs {
 
-    
     width: 100%;
     height: 85%;
     padding-left: 100px;
 
 }
 .inputs input{
-
-    width: 200px;
-
+    border: solid 1px silver;
+    border-radius: 4px;
+    height: 6%;
+    width: 30% ;
+    margin-bottom: 10px;
+    /* margin-left: 25%; */
 }
+
+.btn_cadastrar {
+    
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 15%;
+    height: 10%;
+    background-color: #fff4d5;
+    border: solid 1px black;
+}
+
+.btn_cadastrar:hover{
+   background-color: rgba(255, 166, 0, 0.308);
+    transform: scale(1.04);
+    transition: 0.6s;
+}
+
+
+ /* p {
+    margin-bottom: 5px;
+    margin-left: 25%;
+}
+
+
+
+
+h1 {
+    margin-left: 20%;
+}  */
