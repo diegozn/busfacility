@@ -28,7 +28,7 @@ class ArduinoDataRead {
             }
              
             console.log('Entrou: ', parseFloat(data_float[0].toFixed(0)), 'Saiu:', parseFloat(data_float[1].toFixed(0)));
-            this.__listDataTemp.push(data_float[0]);
+            this.__listDataTemp.push(data_float[1]);
             this.listData.push(data_float[0]);
 
         }, 2000);
