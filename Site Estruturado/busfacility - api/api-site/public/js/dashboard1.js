@@ -43,6 +43,8 @@ function obterPassageiros(user) {
                     lista_saida.push(saida)
 
                 }
+                // console.log(lista_entrada);
+                // console.log(lista_saida);
 
                 
             });

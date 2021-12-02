@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .grafico1 {
 
     height: 480px;

@@ -24,11 +24,11 @@ function tcrt5000(options) {
     maxSaida = typeof maxSaida == "undefined" ? 11 : maxSaida;
   
     let randomEntrada = Math.floor(
-      Math.random() * (maxEntrada - minSaida + 1) + minSaida
+      Math.random() * (maxEntrada - minSaida + 1) + minEntrada
     );
   
     let randomSaida =
-      Math.random() * (maxEntrada - minEntrada) + minSaida;
+      Math.random() * (maxEntrada - minEntrada);
   
     return [randomEntrada, randomSaida];
   }
