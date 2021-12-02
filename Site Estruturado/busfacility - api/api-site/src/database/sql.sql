@@ -10,11 +10,12 @@ CREATE TABLE Empresa (
     endereco VARCHAR(100),
     telefoneEmpresa VARCHAR(20),
     senha VARCHAR(45),
-    permissaoEmpresa int
+    permissao int
 );
 
 CREATE TABLE usuario (
-    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    idUsuario INT PRIMA
+    RY KEY AUTO_INCREMENT,
     nomeUsuario VARCHAR(50),
     senhaUsuario VARCHAR(45),
     permissaoUsuario int,
@@ -38,8 +39,10 @@ fkOnibus int,
 foreign key (fkOnibus) references onibus(idOnibus)
 );
 
-create table registro (
+create table medida (
 idRegistro int primary key auto_increment,
+entrada int,
+saida int,
 dataHora datetime,
 contagem int,
 fkSensor int,
