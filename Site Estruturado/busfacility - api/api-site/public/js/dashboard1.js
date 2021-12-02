@@ -39,12 +39,11 @@ function obterPassageiros(user) {
                     entrada = JSON.stringify(resposta[i]['Entrada']);
                     saida = JSON.stringify(resposta[i]['Saida']);
 
-                    lista_entrada.push(entrada)
-                    lista_saida.push(saida)
+                    lista_pessoas.push(entrada - saida)
+                    
 
                 }
-                // console.log(lista_entrada);
-                // console.log(lista_saida);
+                // console.log(lista_pessoas);
 
                 
             });
@@ -66,8 +65,7 @@ var myChart3;
 var frota_atual;
 var semana_atual;
 var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
-var lista_entrada = [];
-var lista_saida = [];
+var lista_pessoas = []
 
 
 function main(){ //
@@ -136,15 +134,17 @@ function filtrarFrota(){ // Executa quando troca o select de frota
 
 
 function graficoBarra(){// Cria o gráfico de barra
+
+    
     
 var ctx = document.getElementById('canva1').getContext('2d');
 myChart1 = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: ['6h','7h', '8h', '9h', '10h', '11h', '12h','13h','14h', '15h','16h','17h','18h','19h','20h','21h','22h','23h'],
         datasets: [{
             label: 'Nº de Passageiros',
-            data: [h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23],
+            data: [lista_pessoas],
             backgroundColor: [
                 '#C53434',
                 '#C53434',
