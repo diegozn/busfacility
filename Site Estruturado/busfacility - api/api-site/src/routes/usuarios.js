@@ -19,4 +19,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/atualizarSenha", function (req, res) {
+    usuarioController.atualizarSenha(req, res);
+});
+
+router.post("/trocar", function (req, res) {
+    usuarioController.trocar(req, res);
+});
+
 module.exports = router;
