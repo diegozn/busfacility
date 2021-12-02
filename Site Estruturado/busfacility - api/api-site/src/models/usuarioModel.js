@@ -50,4 +50,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
+    atualizarSenha,
+    trocar
 };
