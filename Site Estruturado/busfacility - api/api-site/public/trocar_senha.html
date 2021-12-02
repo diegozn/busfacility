@@ -63,8 +63,6 @@
 </html>
 <script>
 
-var cont = 0;
-
 function trocar() {
     // aguardar();
 
@@ -111,13 +109,9 @@ function trocar() {
 
         } else {
             alert('Email inválido')
-            cont ++;
             console.log("Houve um erro ao tentar realizar o login!");
 
-            if (cont >= 3) {
-            alert('Você atingiu o limite de tentativas hoje, volte mais tarde para tentar novamente')
-            filmeVar = '';
-            }
+            
     
             resposta.text().then(texto => {
             console.error(texto);
