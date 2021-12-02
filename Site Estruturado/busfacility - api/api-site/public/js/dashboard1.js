@@ -6,7 +6,7 @@ function quantidadeDado(user) {
             
             response.json().then(function (resposta) {
                 
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                //console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
                 //localStorage.setItem()
                 localStorage.setItem('quantidadeDados',resposta[0].quantidade)
@@ -36,7 +36,7 @@ function obterPassageiros(user) {
             
             response.json().then(function (resposta) {
                 
-                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                //console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
                 let qt_dados = localStorage.getItem('quantidadeDados');
 
@@ -50,6 +50,7 @@ function obterPassageiros(user) {
                 console.log(dados_entrada)
                 console.log(dados_saida)
 
+<<<<<<< HEAD
                 // for(let i = 0; i < qt_dados; i++){
 
                 //     entrada = JSON.stringify(resposta[i]['Entrada']);
@@ -73,6 +74,22 @@ function obterPassageiros(user) {
                 // console.log(Number(entrada))
                 // console.log(Number(saida))
 
+=======
+                    let nova_entrada = entrada.replace('"','')
+                    let nova_saida = saida.replace('"','')
+
+                    lista_entrada.push(Number(nova_entrada))
+                    lista_saida.push(Number(nova_saida))
+                    //lista_pessoas.push(nova_entrada - nova_saida)
+                    
+
+
+
+                }
+                // console.log(lista_pessoas);
+                console.log(lista_entrada)
+                console.log(lista_saida)
+>>>>>>> 6038d806665b09fc3b2b17d116dbe1d54294ca20
                 
             });
         } else {
@@ -94,6 +111,8 @@ var frota_atual;
 var semana_atual;
 var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
 var lista_pessoas = []
+var lista_entrada = []
+var lista_saida = []
 
 
 function main(){ //
