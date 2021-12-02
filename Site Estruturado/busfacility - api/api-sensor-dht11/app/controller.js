@@ -37,7 +37,7 @@ router.post('/sendData', (request, response) => {
 
     let data_agora = new Date()
 
-    var sql = "INSERT INTO medida(entrada, saida, momento, fk_aquario) VALUES(?)";
+    var sql = "INSERT INTO medida(entrada, saida, momento, fkOnibus) VALUES(?)";
     values = [entrada, saida, data_agora, 1];
     db.query(sql, [values], function(err, result){
         if(err) throw err;
