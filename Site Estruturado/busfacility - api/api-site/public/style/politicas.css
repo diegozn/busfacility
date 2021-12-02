@@ -96,10 +96,20 @@ a {
     letter-spacing: 0.5px;  
 }
 
-.banner {
+.banner-politicas {
     padding: 1%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.banner-politicas .container {
+    display: flex;
+    flex-direction: column;
+}
+
 
 h2 {
     text-align: center;
