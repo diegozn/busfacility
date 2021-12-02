@@ -1,3 +1,27 @@
+function quantidadeDado(user) {
+
+    fetch(`/bus/quantidadedado/${user}`, { cache: 'no-store' }).then(function (response) {
+        
+        if (response.ok) {
+            
+            response.json().then(function (resposta) {
+                
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+                //localStorage.setItem()
+                localStorage.setItem('quantidadeDados',resposta[0].quantidade)
+
+                
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+}
+
 function obterPassageiros(user) {
 
     fetch(`/bus/obterpassageiros/${user}`, { cache: 'no-store' }).then(function (response) {
@@ -8,7 +32,18 @@ function obterPassageiros(user) {
                 
                 console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
-                //localStorage.setItem()
+                let qt_dados = localStorage.getItem('quantidadeDados');
+
+                for(let i = 0; i < qt_dados; i++){
+
+                    entrada = JSON.stringify(resposta[i]['Entrada']);
+                    saida = JSON.stringify(resposta[i]['Saida']);
+
+                    lista_entrada.push(entrada)
+                    lista_saida.push(saida)
+
+                }
+
                 
             });
         } else {
@@ -29,12 +64,15 @@ var myChart3;
 var frota_atual;
 var semana_atual;
 var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
+var lista_entrada = [];
+var lista_saida = [];
 
 
 function main(){ //
 
     setData()
     mostraGrafico()
+    quantidadeDado()
     obterPassageiros()
 
 }

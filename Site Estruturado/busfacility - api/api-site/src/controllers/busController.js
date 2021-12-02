@@ -3,8 +3,25 @@ var busModel = require("../models/busModel");
 function obterPassageiros(req, res) {
 
     var user = req.params.user;
-    console.log('opa')
+    
     busModel.obterPassageiros(user).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function quantidadeDado(req, res) {
+
+    var user = req.params.user;
+    
+    busModel.quantidadeDado(user).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -50,5 +67,6 @@ function addColaborador(req, res) {
 
 module.exports = {
     obterPassageiros,
-    addColaborador
+    addColaborador,
+    quantidadeDado,
 }

@@ -6,6 +6,12 @@ function obterPassageiros(user) {
     return database.executar(instrucaoSql);
 }
 
+function quantidadeDado(user) {
+    instrucaoSql = `SELECT (SELECT COUNT(fk_aquario) AS QT FROM MEDIDA WHERE fk_aquario = 1) AS 'quantidade';`;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 var database = require("../database/config")
 
 function addColaborador(nome, senha, permissao) {
@@ -30,5 +36,6 @@ function entrar(email, senha) {
 module.exports = {
     entrar,
     addColaborador,
-    obterPassageiros
+    obterPassageiros,
+    quantidadeDado
 };
