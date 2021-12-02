@@ -155,7 +155,6 @@
 
 		//Função para obter os dados de temperatura do server
 
-
 		//Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
 		//hora de montar/atualizar o gráfico
 		this.lastIndexTempHumidity = 0;
@@ -199,6 +198,18 @@
 			http.send(null);
 		}
 
+		function teste(params) {
+			listTemp.forEach(data => {
+				//Máximo de 60 itens exibidos no gráfico
+				if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+					chart.data.labels.shift();
+					chart.data.datasets[0].data.shift();
+				}
+				chart.data.labels.push(this.time++);
+				chart.data.datasets[0].data.push(parseFloat(data));
+				chart.update();
+			});
+		}
 		setInterval(() => {
 			get_data();
 			get_dataHumidity();

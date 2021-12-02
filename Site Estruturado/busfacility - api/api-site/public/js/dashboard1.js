@@ -1,3 +1,15 @@
+// variaveis globais
+
+var myChart1;
+var myChart2;
+var myChart3;
+var frota_atual;
+var semana_atual;
+var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
+var lista_pessoas = []
+var lista_entrada = []
+var lista_saida = []
+
 function quantidadeDado(user) {
 
     fetch(`/bus/quantidadedado/${user}`, { cache: 'no-store' }).then(function (response) {
@@ -10,7 +22,6 @@ function quantidadeDado(user) {
                 resposta.reverse();
                 //localStorage.setItem()
                 localStorage.setItem('quantidadeDados',resposta[0].quantidade)
-
                 
             });
         } else {
@@ -22,11 +33,6 @@ function quantidadeDado(user) {
         });
 }
 
-var lista_saida = [];
-var lista_entrada = [];
-
-var dados_entrada = [];
-var dados_saida = [];
 
 function obterPassageiros(user) {
 
@@ -42,37 +48,12 @@ function obterPassageiros(user) {
 
                 for (var i = 0; i < resposta.length; i++) {
                 
-                dados_entrada.push(Number(resposta[i].Entrada));
-                dados_saida.push(Number(resposta[i].Saida));
-
+                lista_entrada.push(Number(resposta[i].Entrada));
+                lista_saida.push(Number(resposta[i].Saida));
+                lista_pessoas.push(resposta[i].Entrada - resposta[i].Saida)
                 }
-                
-                console.log(dados_entrada)
-                console.log(dados_saida)
 
-                // for(let i = 0; i < qt_dados; i++){
-
-                //     entrada = JSON.stringify(resposta[i]['Entrada']);
-                //     saida = JSON.stringify(resposta[i]['Saida']);
-
-                //     // lista_pessoas.push(entrada - saida)
-                //     // lista_entrada.push(entrada);
-                //     // lista_saida.push(saida);
-
-                //     let nova_entrada = entrada.replace('"','')
-                //     let nova_saida = saida.replace('"','')
-
-                //     lista_entrada.push(Number(nova_entrada))
-                //     lista_saida.push(Number(nova_saida))
-                    
-                //     //lista_pessoas.push(nova_entrada - nova_saida)
-                // }
-                // console.log(lista_pessoas);
-                // console.log(lista_entrada);
-                // console.log(lista_saida);
-                // console.log(Number(entrada))
-                // console.log(Number(saida))
-
+                console.log(lista_pessoas)
                 
             });
         } else {
@@ -84,23 +65,8 @@ function obterPassageiros(user) {
         });
 }
 
+function main(){ 
 
-// variaveis globais
-
-var myChart1;
-var myChart2;
-var myChart3;
-var frota_atual;
-var semana_atual;
-var h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,h23;
-var lista_pessoas = []
-var lista_entrada = []
-var lista_saida = []
-
-
-function main(){ //
-
-    setData()
     mostraGrafico()
     quantidadeDado()
     obterPassageiros()
@@ -110,7 +76,7 @@ function main(){ //
 function mostraGrafico(){ // Troca os tipos de graficos
     
     if(semana_atual == undefined || semana_atual == "x"){
-        console.log(semana_atual)
+        // console.log(semana_atual)
         canva3.style.display = 'none';
         canva1.style.display = 'flex';
         graficoBarra()
@@ -122,14 +88,10 @@ function mostraGrafico(){ // Troca os tipos de graficos
         canva3.style.display = 'flex';
         graficoSemana()
         // graficoPizza()
-
-    }
-    
+    }   
 }
 
-
 function limparGrafico(){ //Para criar um gráfico novo é preciso destruir o anterior
-
     if(myChart1 != undefined){
         myChart1.destroy();
     }
@@ -141,31 +103,22 @@ function limparGrafico(){ //Para criar um gráfico novo é preciso destruir o an
     if(myChart3 != undefined){
         myChart3.destroy();
     }
-
 }
 
 function filtrarSemana(){ // Executa quando troca o select de semana
-
     limparGrafico()
     semana_atual = semana.value;
     main()
-
 }
 
-
-
 function filtrarFrota(){ // Executa quando troca o select de frota
-
     limparGrafico()
     frota_atual = filtrar.value;
     main()
-
 }
-
 
 function graficoBarra(){// Cria o gráfico de barra
 
-    
     
 var ctx = document.getElementById('canva1').getContext('2d');
 myChart1 = new Chart(ctx, {
@@ -174,7 +127,7 @@ myChart1 = new Chart(ctx, {
         labels: ['6h','7h', '8h', '9h', '10h', '11h', '12h','13h','14h', '15h','16h','17h','18h','19h','20h','21h','22h','23h'],
         datasets: [{
             label: 'Nº de Passageiros',
-            data: [lista_pessoas],
+            data: lista_pessoas,
             backgroundColor: [
                 '#C53434',
                 '#C53434',
@@ -280,127 +233,32 @@ function graficoSemana(){ // Cria o gráfico de semana
     }
 });
 
-
 }
 
-
-function setData(){ // Gera numeros aleatórios para cada hora toda vez que for chamado
-
-    if(frota_atual == 'bandeirantes'){
-
-        h6 = (Math.random() * 10 + 25).toFixed(0);
-        h7 = (Math.random() * 15 + 20).toFixed(0);
-        h8 = (Math.random() * 15 + 20).toFixed(0);
-        h9 = (Math.random() * 20 + 15).toFixed(0);
-        h10 = (Math.random() * 20 + 15).toFixed(0);
-        h11 = (Math.random() * 30 + 5).toFixed(0);
-        h12 = (Math.random() * 30 + 5).toFixed(0);
-        h13 = (Math.random() * 30 + 5).toFixed(0);
-        h14 = (Math.random() * 35).toFixed(0);
-        h15 = (Math.random() * 35).toFixed(0);
-        h16 = (Math.random() * 20 + 15).toFixed(0);
-        h17 = (Math.random() * 15 + 20).toFixed(0);
-        h18 = (Math.random() * 10 + 25).toFixed(0);
-        h19 = (Math.random() * 15 + 20).toFixed(0);
-        h20 = (Math.random() * 15 + 20).toFixed(0);
-        h21 = (Math.random() * 20 + 15).toFixed(0);
-        h22 = (Math.random() * 30 + 5).toFixed(0);
-        h23 = (Math.random() * 30 + 5).toFixed(0);
-        
-    } else if(frota_atual == 'castelo'){
-        
-        h6 = (Math.random() * 5 + 30).toFixed(0);
-        h7 = (Math.random() * 5 + 30).toFixed(0);
-        h8 = (Math.random() * 5 + 30).toFixed(0);
-        h9 = (Math.random() * 15 + 20).toFixed(0);
-        h10 = (Math.random() * 15 + 20).toFixed(0);
-        h11 = (Math.random() * 20 + 15).toFixed(0);
-        h12 = (Math.random() * 20 + 15).toFixed(0);
-        h13 = (Math.random() * 20 + 15).toFixed(0);
-        h14 = (Math.random() * 20 + 15).toFixed(0);
-        h15 = (Math.random() * 20 + 15).toFixed(0);
-        h16 = (Math.random() * 5 + 30).toFixed(0);
-        h17 = (Math.random() * 5 + 30).toFixed(0);
-        h18 = (Math.random() * 5 + 30).toFixed(0);
-        h19 = (Math.random() * 10 + 25).toFixed(0);
-        h20 = (Math.random() * 10 + 25).toFixed(0);
-        h21 = (Math.random() * 15 + 20).toFixed(0);
-        h22 = (Math.random() * 15 + 20).toFixed(0);
-        h23 = (Math.random() * 30 + 5).toFixed(0);
-
-
-    } else if(frota_atual == 'tatuape'){
-        
-        h6 = (Math.random() * 15 + 20).toFixed(0);
-        h7 = (Math.random() * 15 + 20).toFixed(0);
-        h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 15 + 20).toFixed(0);
-        h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 20 + 15).toFixed(0);
-        h12 = (Math.random() * 10 + 25).toFixed(0);
-        h13 = (Math.random() * 15 + 20).toFixed(0);
-        h14 = (Math.random() * 20 + 15).toFixed(0);
-        h15 = (Math.random() * 20 + 15).toFixed(0);
-        h16 = (Math.random() * 10 + 25).toFixed(0);
-        h17 = (Math.random() * 20 + 15).toFixed(0);
-        h18 = (Math.random() * 15 + 20).toFixed(0);
-        h19 = (Math.random() * 15 + 20).toFixed(0);
-        h20 = (Math.random() * 5 + 30).toFixed(0);
-        h21 = (Math.random() * 10 + 25).toFixed(0);
-        h22 = (Math.random() * 20 + 15).toFixed(0);
-        h23 = (Math.random() * 30 + 5).toFixed(0);
-
-    } else if(frota_atual == 'morumbi'){
-        
-        h6 = (Math.random() * 5 + 30).toFixed(0);
-        h7 = (Math.random() * 5 + 30).toFixed(0);
-        h8 = (Math.random() * 10 + 25).toFixed(0);
-        h9 = (Math.random() * 5 + 30).toFixed(0);
-        h10 = (Math.random() * 10 + 25).toFixed(0);
-        h11 = (Math.random() * 20 + 15).toFixed(0);
-        h12 = (Math.random() * 20 + 15).toFixed(0);
-        h13 = (Math.random() * 10 + 25).toFixed(0);
-        h14 = (Math.random() * 20 + 15).toFixed(0);
-        h15 = (Math.random() * 10 + 25).toFixed(0);
-        h16 = (Math.random() * 20 + 15).toFixed(0);
-        h17 = (Math.random() * 10 + 25).toFixed(0);
-        h18 = (Math.random() * 15 + 20).toFixed(0);
-        h19 = (Math.random() * 15 + 20).toFixed(0);
-        h20 = (Math.random() * 15 + 20).toFixed(0);
-        h21 = (Math.random() * 20 + 15).toFixed(0);
-        h22 = (Math.random() * 20 + 15).toFixed(0);
-        h23 = (Math.random() * 30 + 5).toFixed(0);
-
-    } else {
-
-        h6 = 0
-        h7 = 0
-        h8 = 0
-        h9 = 0
-        h10 = 0
-        h11 = 0
-        h12 = 0
-        h13 = 0
-        h14 = 0
-        h15 = 0
-        h16 = 0
-        h17 = 0
-        h18 = 0
-        h19 = 0
-        h20 = 0
-        h21 = 0
-        h22 = 0
-        h23 = 0
-
-    }
-
-}
 
 function recarregar(){ // Executa ao recarregar a página
 
     filtrar.value = ``;
-    semana.value = 'x';
+    // semana.value = 'x';
     var user = localStorage.getItem('social');
     usuario.innerHTML = `${user}!`
 
 }
+
+function teste() {
+    lista_pessoas.forEach(data => {
+        //Máximo de 60 itens exibidos no gráfico
+        if (myChart1.data.labels.length == 10 && myChart1.data.datasets[0].data.length == 10) {
+            myChart1.data.labels.shift();
+            myChart1.data.datasets[0].data.shift();
+        }
+        myChart1.data.datasets[0].data.push(parseFloat(data));
+        myChart1.update();
+    });
+}
+
+// setInterval(() => {
+//     // limparGrafico(),
+//     // graficoBarra()
+//     // teste()
+// }, 3000);
