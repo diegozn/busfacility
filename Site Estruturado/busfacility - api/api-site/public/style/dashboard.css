@@ -8,7 +8,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    
+    margin-right: 50px;
     padding: 25px;
 
 }
@@ -152,5 +152,29 @@ body {
 #canva3{
 
     display: none;
+
+}
+.analitics_pai{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+.analitic{
+
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px 80px 80px;
+    background-color: blue;
+    
+}
+.box_analitic{
+
+    height: 40px;
+    width: 40px;
+    background-color: grey;
 
 }

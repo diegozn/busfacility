@@ -32,8 +32,8 @@ router.get('/humidity', (request, response, next) => {
 
 
 router.post('/sendData', (request, response) => {
-    entrada = ArduinoData.ListEntrou[ArduinoData.ListEntrou.length - 1];
-    saida = ArduinoData.ListSaiu[ArduinoData.ListSaiu.length - 1];
+    entrada = Number(Math.random() * 20 + 1);
+    saida = Number(Math.random() * 15 - 1);
 
     let data_agora = new Date()
 

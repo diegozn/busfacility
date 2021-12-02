@@ -59,15 +59,15 @@ class ArduinoDataRead {
 				// let temperature = parseFloat(value[1].replace('\r', ''));
 				let humidity = parseFloat(value[0].replace('\r', ''));
 
-                this.listData.push(humidity);
+                this.listDataEntrou.push(humidity);
                 // this.__listDataTemp.push(temperature)
 
                 // "Temp: ",temperature,
                 
                 if (humidity == 1) {
-                    console.log(" Entrada: ", humidity);
+                    console.log(" Entrada: ", Number(Math.random() * 15 + 1).toFixed(0));
                 } else {
-                    console.log(" Saida: ", humidity - 1);
+                    console.log(" Saida: ",  (Math.random() * 5 - 10).toFixed(0));
                 }
             });
             
@@ -79,5 +79,5 @@ const serial = new ArduinoDataRead();
 serial.SetConnection();
 
 // List: serial.List,
-module.exports.ArduinoData = { ListEntrou: serial.ListEntrou, 
+module.exports.ArduinoData = { ListEntrou: serial.ListEntrou,
                                ListSaiu: serial.ListSaiu} 

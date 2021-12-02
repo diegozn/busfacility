@@ -44,13 +44,14 @@ function obterPassageiros(user) {
                 
                 //console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
-                let qt_dados = localStorage.getItem('quantidadeDados');
+               // let qt_dados = localStorage.getItem('quantidadeDados');
 
                 for (var i = 0; i < resposta.length; i++) {
                 
                 lista_entrada.push(Number(resposta[i].Entrada));
                 lista_saida.push(Number(resposta[i].Saida));
                 lista_pessoas.push(resposta[i].Entrada - resposta[i].Saida)
+                
                 }
 
                 console.log(lista_pessoas)
