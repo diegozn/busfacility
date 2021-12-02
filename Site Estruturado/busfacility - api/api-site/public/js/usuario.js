@@ -9,19 +9,6 @@
 
 // }
 
-
-function validacao_geral() {
-    
-    if (usuario == null) {
-        header.style.display = 'none';
-        header3.style.display = 'flex';
-    } else {
-        header.style.display = 'flex';
-        header3.style.display = 'none';
-    }
-   
-}
-
 function cadastrarRotas(){
 
     pg0.style.display = `none`;
