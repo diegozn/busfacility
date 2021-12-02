@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if (err) throw err;
-    console.log('Conectado ao BD com sucesso!')     
+    console.log('Conectado ao BD com sucesso!')
 });
 
 

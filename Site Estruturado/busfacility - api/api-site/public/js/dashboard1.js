@@ -22,6 +22,12 @@ function quantidadeDado(user) {
         });
 }
 
+var lista_saida = [];
+var lista_entrada = [];
+
+var dados_entrada = [];
+var dados_saida = [];
+
 function obterPassageiros(user) {
 
     fetch(`/bus/obterpassageiros/${user}`, { cache: 'no-store' }).then(function (response) {
@@ -34,16 +40,38 @@ function obterPassageiros(user) {
                 resposta.reverse();
                 let qt_dados = localStorage.getItem('quantidadeDados');
 
-                for(let i = 0; i < qt_dados; i++){
-
-                    entrada = JSON.stringify(resposta[i]['Entrada']);
-                    saida = JSON.stringify(resposta[i]['Saida']);
-
-                    lista_pessoas.push(entrada - saida)
-                    
+                for (var i = 0; i < resposta.length; i++) {
+                
+                dados_entrada.push(Number(resposta[i].Entrada));
+                dados_saida.push(Number(resposta[i].Saida));
 
                 }
+                
+                console.log(dados_entrada)
+                console.log(dados_saida)
+
+                // for(let i = 0; i < qt_dados; i++){
+
+                //     entrada = JSON.stringify(resposta[i]['Entrada']);
+                //     saida = JSON.stringify(resposta[i]['Saida']);
+
+                //     // lista_pessoas.push(entrada - saida)
+                //     // lista_entrada.push(entrada);
+                //     // lista_saida.push(saida);
+
+                //     let nova_entrada = entrada.replace('"','')
+                //     let nova_saida = saida.replace('"','')
+
+                //     lista_entrada.push(Number(nova_entrada))
+                //     lista_saida.push(Number(nova_saida))
+                    
+                //     //lista_pessoas.push(nova_entrada - nova_saida)
+                // }
                 // console.log(lista_pessoas);
+                // console.log(lista_entrada);
+                // console.log(lista_saida);
+                // console.log(Number(entrada))
+                // console.log(Number(saida))
 
                 
             });
@@ -84,14 +112,14 @@ function mostraGrafico(){ // Troca os tipos de graficos
         canva3.style.display = 'none';
         canva1.style.display = 'flex';
         graficoBarra()
-        graficoPizza()
+        // graficoPizza()
 
     } else {
         console.log(semana_atual)
         canva1.style.display = 'none';
         canva3.style.display = 'flex';
         graficoSemana()
-        graficoPizza()
+        // graficoPizza()
 
     }
     
